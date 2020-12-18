@@ -1,0 +1,1215 @@
+2020-12-10T23:06:00.4048633+03:00 [INF] (Microsoft.Hosting.Lifetime) Application started. Press Ctrl+C to shut down.
+2020-12-10T23:06:00.4746326+03:00 [INF] (Microsoft.Hosting.Lifetime) Hosting environment: "Development"
+2020-12-10T23:06:00.4764361+03:00 [INF] (Microsoft.Hosting.Lifetime) Content root path: "C:\Users\vladf\source\repos\Blog111"
+2020-12-10T23:06:02.0289809+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) Creating DbCommand for '"ExecuteReader"'.
+2020-12-10T23:06:02.0777255+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) Created DbCommand for '"ExecuteReader"' (51ms).
+2020-12-10T23:06:02.4098265+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) Executing DbCommand [Parameters=["@__search_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [p].[ID], [p].[Approved], [p].[ApproverId], [p].[CategoryID], [p].[Content], [p].[Create], [p].[CreatorId], [p].[Published], [p].[Title], [p].[Update], [p].[category_string], [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[Header], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[content], [c].[ID], [c].[Content], [c].[Create], [c].[ParentID], [c].[PostID], [c].[PosterId]
+FROM [Posts] AS [p]
+LEFT JOIN [AspNetUsers] AS [a] ON [p].[CreatorId] = [a].[Id]
+LEFT JOIN [Comments] AS [c] ON [p].[ID] = [c].[PostID]
+WHERE ((@__search_0 = N'') OR (CHARINDEX(@__search_0, [p].[Title]) > 0)) OR ((@__search_0 = N'') OR (CHARINDEX(@__search_0, [p].[Content]) > 0))
+ORDER BY [p].[Update] DESC, [p].[ID], [c].[ID]"
+2020-12-10T23:06:05.4986777+03:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("3,095"ms) [Parameters=["@__search_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [p].[ID], [p].[Approved], [p].[ApproverId], [p].[CategoryID], [p].[Content], [p].[Create], [p].[CreatorId], [p].[Published], [p].[Title], [p].[Update], [p].[category_string], [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[Header], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[content], [c].[ID], [c].[Content], [c].[Create], [c].[ParentID], [c].[PostID], [c].[PosterId]
+FROM [Posts] AS [p]
+LEFT JOIN [AspNetUsers] AS [a] ON [p].[CreatorId] = [a].[Id]
+LEFT JOIN [Comments] AS [c] ON [p].[ID] = [c].[PostID]
+WHERE ((@__search_0 = N'') OR (CHARINDEX(@__search_0, [p].[Title]) > 0)) OR ((@__search_0 = N'') OR (CHARINDEX(@__search_0, [p].[Content]) > 0))
+ORDER BY [p].[Update] DESC, [p].[ID], [c].[ID]"
+2020-12-10T23:06:05.6682099+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) A data reader was disposed.
+2020-12-10T23:06:05.6912995+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) Creating DbCommand for '"ExecuteReader"'.
+2020-12-10T23:06:05.6916200+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) Created DbCommand for '"ExecuteReader"' (0ms).
+2020-12-10T23:06:05.6946170+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) Executing DbCommand [Parameters=["@__search_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [p].[ID], [p].[Approved], [p].[ApproverId], [p].[CategoryID], [p].[Content], [p].[Create], [p].[CreatorId], [p].[Published], [p].[Title], [p].[Update], [p].[category_string], [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[Header], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[content], [c].[ID], [c].[Content], [c].[Create], [c].[ParentID], [c].[PostID], [c].[PosterId]
+FROM [Posts] AS [p]
+LEFT JOIN [AspNetUsers] AS [a] ON [p].[CreatorId] = [a].[Id]
+LEFT JOIN [Comments] AS [c] ON [p].[ID] = [c].[PostID]
+WHERE ((@__search_0 = N'') OR (CHARINDEX(@__search_0, [p].[Title]) > 0)) OR ((@__search_0 = N'') OR (CHARINDEX(@__search_0, [p].[Content]) > 0))
+ORDER BY [p].[Update] DESC, [p].[ID], [c].[ID]"
+2020-12-10T23:06:05.7082396+03:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("14"ms) [Parameters=["@__search_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [p].[ID], [p].[Approved], [p].[ApproverId], [p].[CategoryID], [p].[Content], [p].[Create], [p].[CreatorId], [p].[Published], [p].[Title], [p].[Update], [p].[category_string], [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[Header], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[content], [c].[ID], [c].[Content], [c].[Create], [c].[ParentID], [c].[PostID], [c].[PosterId]
+FROM [Posts] AS [p]
+LEFT JOIN [AspNetUsers] AS [a] ON [p].[CreatorId] = [a].[Id]
+LEFT JOIN [Comments] AS [c] ON [p].[ID] = [c].[PostID]
+WHERE ((@__search_0 = N'') OR (CHARINDEX(@__search_0, [p].[Title]) > 0)) OR ((@__search_0 = N'') OR (CHARINDEX(@__search_0, [p].[Content]) > 0))
+ORDER BY [p].[Update] DESC, [p].[ID], [c].[ID]"
+2020-12-10T23:06:05.7119138+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) A data reader was disposed.
+2020-12-10T23:06:09.8541009+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) Creating DbCommand for '"ExecuteReader"'.
+2020-12-10T23:06:09.8546382+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) Created DbCommand for '"ExecuteReader"' (0ms).
+2020-12-10T23:06:09.8571361+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) Executing DbCommand [Parameters=["@__PostID_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [t].[ID], [t].[Approved], [t].[ApproverId], [t].[CategoryID], [t].[Content], [t].[Create], [t].[CreatorId], [t].[Published], [t].[Title], [t].[Update], [t].[category_string], [t].[Id0], [t].[AccessFailedCount], [t].[ConcurrencyStamp], [t].[Email], [t].[EmailConfirmed], [t].[FirstName], [t].[Header], [t].[LastName], [t].[LockoutEnabled], [t].[LockoutEnd], [t].[NormalizedEmail], [t].[NormalizedUserName], [t].[PasswordHash], [t].[PhoneNumber], [t].[PhoneNumberConfirmed], [t].[SecurityStamp], [t].[TwoFactorEnabled], [t].[UserName], [t].[content0], [t1].[ID], [t1].[Content], [t1].[Create], [t1].[ParentID], [t1].[PostID], [t1].[PosterId], [t1].[Id0], [t1].[AccessFailedCount], [t1].[ConcurrencyStamp], [t1].[Email], [t1].[EmailConfirmed], [t1].[FirstName], [t1].[Header], [t1].[LastName], [t1].[LockoutEnabled], [t1].[LockoutEnd], [t1].[NormalizedEmail], [t1].[NormalizedUserName], [t1].[PasswordHash], [t1].[PhoneNumber], [t1].[PhoneNumberConfirmed], [t1].[SecurityStamp], [t1].[TwoFactorEnabled], [t1].[UserName], [t1].[content0], [t1].[ID1], [t1].[Content1], [t1].[Create0], [t1].[ParentID0], [t1].[PostID0], [t1].[PosterId0], [t1].[ID00], [t1].[Content00], [t1].[Create00], [t1].[ParentID00], [t1].[PostID00], [t1].[PosterId00]
+FROM (
+    SELECT TOP(1) [p].[ID], [p].[Approved], [p].[ApproverId], [p].[CategoryID], [p].[Content], [p].[Create], [p].[CreatorId], [p].[Published], [p].[Title], [p].[Update], [p].[category_string], [a].[Id] AS [Id0], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[Header], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[content] AS [content0]
+    FROM [Posts] AS [p]
+    LEFT JOIN [AspNetUsers] AS [a] ON [p].[CreatorId] = [a].[Id]
+    WHERE [p].[ID] = @__PostID_0
+) AS [t]
+LEFT JOIN (
+    SELECT [c].[ID], [c].[Content], [c].[Create], [c].[ParentID], [c].[PostID], [c].[PosterId], [a0].[Id] AS [Id0], [a0].[AccessFailedCount], [a0].[ConcurrencyStamp], [a0].[Email], [a0].[EmailConfirmed], [a0].[FirstName], [a0].[Header], [a0].[LastName], [a0].[LockoutEnabled], [a0].[LockoutEnd], [a0].[NormalizedEmail], [a0].[NormalizedUserName], [a0].[PasswordHash], [a0].[PhoneNumber], [a0].[PhoneNumberConfirmed], [a0].[SecurityStamp], [a0].[TwoFactorEnabled], [a0].[UserName], [a0].[content] AS [content0], [t0].[ID] AS [ID1], [t0].[Content] AS [Content1], [t0].[Create] AS [Create0], [t0].[ParentID] AS [ParentID0], [t0].[PostID] AS [PostID0], [t0].[PosterId] AS [PosterId0], [t0].[ID0] AS [ID00], [t0].[Content0] AS [Content00], [t0].[Create0] AS [Create00], [t0].[ParentID0] AS [ParentID00], [t0].[PostID0] AS [PostID00], [t0].[PosterId0] AS [PosterId00]
+    FROM [Comments] AS [c]
+    LEFT JOIN [AspNetUsers] AS [a0] ON [c].[PosterId] = [a0].[Id]
+    LEFT JOIN (
+        SELECT [c0].[ID], [c0].[Content], [c0].[Create], [c0].[ParentID], [c0].[PostID], [c0].[PosterId], [c1].[ID] AS [ID0], [c1].[Content] AS [Content0], [c1].[Create] AS [Create0], [c1].[ParentID] AS [ParentID0], [c1].[PostID] AS [PostID0], [c1].[PosterId] AS [PosterId0]
+        FROM [Comments] AS [c0]
+        LEFT JOIN [Comments] AS [c1] ON [c0].[ParentID] = [c1].[ID]
+    ) AS [t0] ON [c].[ID] = [t0].[ParentID]
+) AS [t1] ON [t].[ID] = [t1].[PostID]
+ORDER BY [t].[ID], [t1].[ID], [t1].[ID1]"
+2020-12-10T23:06:09.8753627+03:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("19"ms) [Parameters=["@__PostID_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [t].[ID], [t].[Approved], [t].[ApproverId], [t].[CategoryID], [t].[Content], [t].[Create], [t].[CreatorId], [t].[Published], [t].[Title], [t].[Update], [t].[category_string], [t].[Id0], [t].[AccessFailedCount], [t].[ConcurrencyStamp], [t].[Email], [t].[EmailConfirmed], [t].[FirstName], [t].[Header], [t].[LastName], [t].[LockoutEnabled], [t].[LockoutEnd], [t].[NormalizedEmail], [t].[NormalizedUserName], [t].[PasswordHash], [t].[PhoneNumber], [t].[PhoneNumberConfirmed], [t].[SecurityStamp], [t].[TwoFactorEnabled], [t].[UserName], [t].[content0], [t1].[ID], [t1].[Content], [t1].[Create], [t1].[ParentID], [t1].[PostID], [t1].[PosterId], [t1].[Id0], [t1].[AccessFailedCount], [t1].[ConcurrencyStamp], [t1].[Email], [t1].[EmailConfirmed], [t1].[FirstName], [t1].[Header], [t1].[LastName], [t1].[LockoutEnabled], [t1].[LockoutEnd], [t1].[NormalizedEmail], [t1].[NormalizedUserName], [t1].[PasswordHash], [t1].[PhoneNumber], [t1].[PhoneNumberConfirmed], [t1].[SecurityStamp], [t1].[TwoFactorEnabled], [t1].[UserName], [t1].[content0], [t1].[ID1], [t1].[Content1], [t1].[Create0], [t1].[ParentID0], [t1].[PostID0], [t1].[PosterId0], [t1].[ID00], [t1].[Content00], [t1].[Create00], [t1].[ParentID00], [t1].[PostID00], [t1].[PosterId00]
+FROM (
+    SELECT TOP(1) [p].[ID], [p].[Approved], [p].[ApproverId], [p].[CategoryID], [p].[Content], [p].[Create], [p].[CreatorId], [p].[Published], [p].[Title], [p].[Update], [p].[category_string], [a].[Id] AS [Id0], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[Header], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[content] AS [content0]
+    FROM [Posts] AS [p]
+    LEFT JOIN [AspNetUsers] AS [a] ON [p].[CreatorId] = [a].[Id]
+    WHERE [p].[ID] = @__PostID_0
+) AS [t]
+LEFT JOIN (
+    SELECT [c].[ID], [c].[Content], [c].[Create], [c].[ParentID], [c].[PostID], [c].[PosterId], [a0].[Id] AS [Id0], [a0].[AccessFailedCount], [a0].[ConcurrencyStamp], [a0].[Email], [a0].[EmailConfirmed], [a0].[FirstName], [a0].[Header], [a0].[LastName], [a0].[LockoutEnabled], [a0].[LockoutEnd], [a0].[NormalizedEmail], [a0].[NormalizedUserName], [a0].[PasswordHash], [a0].[PhoneNumber], [a0].[PhoneNumberConfirmed], [a0].[SecurityStamp], [a0].[TwoFactorEnabled], [a0].[UserName], [a0].[content] AS [content0], [t0].[ID] AS [ID1], [t0].[Content] AS [Content1], [t0].[Create] AS [Create0], [t0].[ParentID] AS [ParentID0], [t0].[PostID] AS [PostID0], [t0].[PosterId] AS [PosterId0], [t0].[ID0] AS [ID00], [t0].[Content0] AS [Content00], [t0].[Create0] AS [Create00], [t0].[ParentID0] AS [ParentID00], [t0].[PostID0] AS [PostID00], [t0].[PosterId0] AS [PosterId00]
+    FROM [Comments] AS [c]
+    LEFT JOIN [AspNetUsers] AS [a0] ON [c].[PosterId] = [a0].[Id]
+    LEFT JOIN (
+        SELECT [c0].[ID], [c0].[Content], [c0].[Create], [c0].[ParentID], [c0].[PostID], [c0].[PosterId], [c1].[ID] AS [ID0], [c1].[Content] AS [Content0], [c1].[Create] AS [Create0], [c1].[ParentID] AS [ParentID0], [c1].[PostID] AS [PostID0], [c1].[PosterId] AS [PosterId0]
+        FROM [Comments] AS [c0]
+        LEFT JOIN [Comments] AS [c1] ON [c0].[ParentID] = [c1].[ID]
+    ) AS [t0] ON [c].[ID] = [t0].[ParentID]
+) AS [t1] ON [t].[ID] = [t1].[PostID]
+ORDER BY [t].[ID], [t1].[ID], [t1].[ID1]"
+2020-12-10T23:06:09.8764184+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) A data reader was disposed.
+2020-12-10T23:10:14.6326044+03:00 [INF] (Microsoft.Hosting.Lifetime) Now listening on: "https://localhost:5001"
+2020-12-10T23:10:14.6948500+03:00 [INF] (Microsoft.Hosting.Lifetime) Now listening on: "http://localhost:5000"
+2020-12-10T23:10:14.6987277+03:00 [INF] (Microsoft.Hosting.Lifetime) Application started. Press Ctrl+C to shut down.
+2020-12-10T23:10:14.6991047+03:00 [INF] (Microsoft.Hosting.Lifetime) Hosting environment: "Development"
+2020-12-10T23:10:14.6993799+03:00 [INF] (Microsoft.Hosting.Lifetime) Content root path: "C:\Users\vladf\source\repos\Blog111"
+2020-12-10T23:10:16.6791414+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) Creating DbCommand for '"ExecuteReader"'.
+2020-12-10T23:10:16.7176520+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) Created DbCommand for '"ExecuteReader"' (38ms).
+2020-12-10T23:10:17.0362959+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) Executing DbCommand [Parameters=["@__search_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [p].[ID], [p].[Approved], [p].[ApproverId], [p].[CategoryID], [p].[Content], [p].[Create], [p].[CreatorId], [p].[Published], [p].[Title], [p].[Update], [p].[category_string], [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[Header], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[content], [c].[ID], [c].[Content], [c].[Create], [c].[ParentID], [c].[PostID], [c].[PosterId]
+FROM [Posts] AS [p]
+LEFT JOIN [AspNetUsers] AS [a] ON [p].[CreatorId] = [a].[Id]
+LEFT JOIN [Comments] AS [c] ON [p].[ID] = [c].[PostID]
+WHERE ((@__search_0 = N'') OR (CHARINDEX(@__search_0, [p].[Title]) > 0)) OR ((@__search_0 = N'') OR (CHARINDEX(@__search_0, [p].[Content]) > 0))
+ORDER BY [p].[Update] DESC, [p].[ID], [c].[ID]"
+2020-12-10T23:10:17.1140270+03:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("88"ms) [Parameters=["@__search_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [p].[ID], [p].[Approved], [p].[ApproverId], [p].[CategoryID], [p].[Content], [p].[Create], [p].[CreatorId], [p].[Published], [p].[Title], [p].[Update], [p].[category_string], [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[Header], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[content], [c].[ID], [c].[Content], [c].[Create], [c].[ParentID], [c].[PostID], [c].[PosterId]
+FROM [Posts] AS [p]
+LEFT JOIN [AspNetUsers] AS [a] ON [p].[CreatorId] = [a].[Id]
+LEFT JOIN [Comments] AS [c] ON [p].[ID] = [c].[PostID]
+WHERE ((@__search_0 = N'') OR (CHARINDEX(@__search_0, [p].[Title]) > 0)) OR ((@__search_0 = N'') OR (CHARINDEX(@__search_0, [p].[Content]) > 0))
+ORDER BY [p].[Update] DESC, [p].[ID], [c].[ID]"
+2020-12-10T23:10:17.2955141+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) A data reader was disposed.
+2020-12-10T23:10:17.3141551+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) Creating DbCommand for '"ExecuteReader"'.
+2020-12-10T23:10:17.3147466+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) Created DbCommand for '"ExecuteReader"' (0ms).
+2020-12-10T23:10:17.3165110+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) Executing DbCommand [Parameters=["@__search_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [p].[ID], [p].[Approved], [p].[ApproverId], [p].[CategoryID], [p].[Content], [p].[Create], [p].[CreatorId], [p].[Published], [p].[Title], [p].[Update], [p].[category_string], [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[Header], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[content], [c].[ID], [c].[Content], [c].[Create], [c].[ParentID], [c].[PostID], [c].[PosterId]
+FROM [Posts] AS [p]
+LEFT JOIN [AspNetUsers] AS [a] ON [p].[CreatorId] = [a].[Id]
+LEFT JOIN [Comments] AS [c] ON [p].[ID] = [c].[PostID]
+WHERE ((@__search_0 = N'') OR (CHARINDEX(@__search_0, [p].[Title]) > 0)) OR ((@__search_0 = N'') OR (CHARINDEX(@__search_0, [p].[Content]) > 0))
+ORDER BY [p].[Update] DESC, [p].[ID], [c].[ID]"
+2020-12-10T23:10:17.3218702+03:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("5"ms) [Parameters=["@__search_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [p].[ID], [p].[Approved], [p].[ApproverId], [p].[CategoryID], [p].[Content], [p].[Create], [p].[CreatorId], [p].[Published], [p].[Title], [p].[Update], [p].[category_string], [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[Header], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[content], [c].[ID], [c].[Content], [c].[Create], [c].[ParentID], [c].[PostID], [c].[PosterId]
+FROM [Posts] AS [p]
+LEFT JOIN [AspNetUsers] AS [a] ON [p].[CreatorId] = [a].[Id]
+LEFT JOIN [Comments] AS [c] ON [p].[ID] = [c].[PostID]
+WHERE ((@__search_0 = N'') OR (CHARINDEX(@__search_0, [p].[Title]) > 0)) OR ((@__search_0 = N'') OR (CHARINDEX(@__search_0, [p].[Content]) > 0))
+ORDER BY [p].[Update] DESC, [p].[ID], [c].[ID]"
+2020-12-10T23:10:17.3289881+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) A data reader was disposed.
+2020-12-10T23:10:28.0377783+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) Creating DbCommand for '"ExecuteReader"'.
+2020-12-10T23:10:28.0387762+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) Created DbCommand for '"ExecuteReader"' (1ms).
+2020-12-10T23:10:28.0402943+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) Executing DbCommand [Parameters=["@__PostID_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [t].[ID], [t].[Approved], [t].[ApproverId], [t].[CategoryID], [t].[Content], [t].[Create], [t].[CreatorId], [t].[Published], [t].[Title], [t].[Update], [t].[category_string], [t].[Id0], [t].[AccessFailedCount], [t].[ConcurrencyStamp], [t].[Email], [t].[EmailConfirmed], [t].[FirstName], [t].[Header], [t].[LastName], [t].[LockoutEnabled], [t].[LockoutEnd], [t].[NormalizedEmail], [t].[NormalizedUserName], [t].[PasswordHash], [t].[PhoneNumber], [t].[PhoneNumberConfirmed], [t].[SecurityStamp], [t].[TwoFactorEnabled], [t].[UserName], [t].[content0], [t1].[ID], [t1].[Content], [t1].[Create], [t1].[ParentID], [t1].[PostID], [t1].[PosterId], [t1].[Id0], [t1].[AccessFailedCount], [t1].[ConcurrencyStamp], [t1].[Email], [t1].[EmailConfirmed], [t1].[FirstName], [t1].[Header], [t1].[LastName], [t1].[LockoutEnabled], [t1].[LockoutEnd], [t1].[NormalizedEmail], [t1].[NormalizedUserName], [t1].[PasswordHash], [t1].[PhoneNumber], [t1].[PhoneNumberConfirmed], [t1].[SecurityStamp], [t1].[TwoFactorEnabled], [t1].[UserName], [t1].[content0], [t1].[ID1], [t1].[Content1], [t1].[Create0], [t1].[ParentID0], [t1].[PostID0], [t1].[PosterId0], [t1].[ID00], [t1].[Content00], [t1].[Create00], [t1].[ParentID00], [t1].[PostID00], [t1].[PosterId00]
+FROM (
+    SELECT TOP(1) [p].[ID], [p].[Approved], [p].[ApproverId], [p].[CategoryID], [p].[Content], [p].[Create], [p].[CreatorId], [p].[Published], [p].[Title], [p].[Update], [p].[category_string], [a].[Id] AS [Id0], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[Header], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[content] AS [content0]
+    FROM [Posts] AS [p]
+    LEFT JOIN [AspNetUsers] AS [a] ON [p].[CreatorId] = [a].[Id]
+    WHERE [p].[ID] = @__PostID_0
+) AS [t]
+LEFT JOIN (
+    SELECT [c].[ID], [c].[Content], [c].[Create], [c].[ParentID], [c].[PostID], [c].[PosterId], [a0].[Id] AS [Id0], [a0].[AccessFailedCount], [a0].[ConcurrencyStamp], [a0].[Email], [a0].[EmailConfirmed], [a0].[FirstName], [a0].[Header], [a0].[LastName], [a0].[LockoutEnabled], [a0].[LockoutEnd], [a0].[NormalizedEmail], [a0].[NormalizedUserName], [a0].[PasswordHash], [a0].[PhoneNumber], [a0].[PhoneNumberConfirmed], [a0].[SecurityStamp], [a0].[TwoFactorEnabled], [a0].[UserName], [a0].[content] AS [content0], [t0].[ID] AS [ID1], [t0].[Content] AS [Content1], [t0].[Create] AS [Create0], [t0].[ParentID] AS [ParentID0], [t0].[PostID] AS [PostID0], [t0].[PosterId] AS [PosterId0], [t0].[ID0] AS [ID00], [t0].[Content0] AS [Content00], [t0].[Create0] AS [Create00], [t0].[ParentID0] AS [ParentID00], [t0].[PostID0] AS [PostID00], [t0].[PosterId0] AS [PosterId00]
+    FROM [Comments] AS [c]
+    LEFT JOIN [AspNetUsers] AS [a0] ON [c].[PosterId] = [a0].[Id]
+    LEFT JOIN (
+        SELECT [c0].[ID], [c0].[Content], [c0].[Create], [c0].[ParentID], [c0].[PostID], [c0].[PosterId], [c1].[ID] AS [ID0], [c1].[Content] AS [Content0], [c1].[Create] AS [Create0], [c1].[ParentID] AS [ParentID0], [c1].[PostID] AS [PostID0], [c1].[PosterId] AS [PosterId0]
+        FROM [Comments] AS [c0]
+        LEFT JOIN [Comments] AS [c1] ON [c0].[ParentID] = [c1].[ID]
+    ) AS [t0] ON [c].[ID] = [t0].[ParentID]
+) AS [t1] ON [t].[ID] = [t1].[PostID]
+ORDER BY [t].[ID], [t1].[ID], [t1].[ID1]"
+2020-12-10T23:10:28.0597521+03:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("20"ms) [Parameters=["@__PostID_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [t].[ID], [t].[Approved], [t].[ApproverId], [t].[CategoryID], [t].[Content], [t].[Create], [t].[CreatorId], [t].[Published], [t].[Title], [t].[Update], [t].[category_string], [t].[Id0], [t].[AccessFailedCount], [t].[ConcurrencyStamp], [t].[Email], [t].[EmailConfirmed], [t].[FirstName], [t].[Header], [t].[LastName], [t].[LockoutEnabled], [t].[LockoutEnd], [t].[NormalizedEmail], [t].[NormalizedUserName], [t].[PasswordHash], [t].[PhoneNumber], [t].[PhoneNumberConfirmed], [t].[SecurityStamp], [t].[TwoFactorEnabled], [t].[UserName], [t].[content0], [t1].[ID], [t1].[Content], [t1].[Create], [t1].[ParentID], [t1].[PostID], [t1].[PosterId], [t1].[Id0], [t1].[AccessFailedCount], [t1].[ConcurrencyStamp], [t1].[Email], [t1].[EmailConfirmed], [t1].[FirstName], [t1].[Header], [t1].[LastName], [t1].[LockoutEnabled], [t1].[LockoutEnd], [t1].[NormalizedEmail], [t1].[NormalizedUserName], [t1].[PasswordHash], [t1].[PhoneNumber], [t1].[PhoneNumberConfirmed], [t1].[SecurityStamp], [t1].[TwoFactorEnabled], [t1].[UserName], [t1].[content0], [t1].[ID1], [t1].[Content1], [t1].[Create0], [t1].[ParentID0], [t1].[PostID0], [t1].[PosterId0], [t1].[ID00], [t1].[Content00], [t1].[Create00], [t1].[ParentID00], [t1].[PostID00], [t1].[PosterId00]
+FROM (
+    SELECT TOP(1) [p].[ID], [p].[Approved], [p].[ApproverId], [p].[CategoryID], [p].[Content], [p].[Create], [p].[CreatorId], [p].[Published], [p].[Title], [p].[Update], [p].[category_string], [a].[Id] AS [Id0], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[Header], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[content] AS [content0]
+    FROM [Posts] AS [p]
+    LEFT JOIN [AspNetUsers] AS [a] ON [p].[CreatorId] = [a].[Id]
+    WHERE [p].[ID] = @__PostID_0
+) AS [t]
+LEFT JOIN (
+    SELECT [c].[ID], [c].[Content], [c].[Create], [c].[ParentID], [c].[PostID], [c].[PosterId], [a0].[Id] AS [Id0], [a0].[AccessFailedCount], [a0].[ConcurrencyStamp], [a0].[Email], [a0].[EmailConfirmed], [a0].[FirstName], [a0].[Header], [a0].[LastName], [a0].[LockoutEnabled], [a0].[LockoutEnd], [a0].[NormalizedEmail], [a0].[NormalizedUserName], [a0].[PasswordHash], [a0].[PhoneNumber], [a0].[PhoneNumberConfirmed], [a0].[SecurityStamp], [a0].[TwoFactorEnabled], [a0].[UserName], [a0].[content] AS [content0], [t0].[ID] AS [ID1], [t0].[Content] AS [Content1], [t0].[Create] AS [Create0], [t0].[ParentID] AS [ParentID0], [t0].[PostID] AS [PostID0], [t0].[PosterId] AS [PosterId0], [t0].[ID0] AS [ID00], [t0].[Content0] AS [Content00], [t0].[Create0] AS [Create00], [t0].[ParentID0] AS [ParentID00], [t0].[PostID0] AS [PostID00], [t0].[PosterId0] AS [PosterId00]
+    FROM [Comments] AS [c]
+    LEFT JOIN [AspNetUsers] AS [a0] ON [c].[PosterId] = [a0].[Id]
+    LEFT JOIN (
+        SELECT [c0].[ID], [c0].[Content], [c0].[Create], [c0].[ParentID], [c0].[PostID], [c0].[PosterId], [c1].[ID] AS [ID0], [c1].[Content] AS [Content0], [c1].[Create] AS [Create0], [c1].[ParentID] AS [ParentID0], [c1].[PostID] AS [PostID0], [c1].[PosterId] AS [PosterId0]
+        FROM [Comments] AS [c0]
+        LEFT JOIN [Comments] AS [c1] ON [c0].[ParentID] = [c1].[ID]
+    ) AS [t0] ON [c].[ID] = [t0].[ParentID]
+) AS [t1] ON [t].[ID] = [t1].[PostID]
+ORDER BY [t].[ID], [t1].[ID], [t1].[ID1]"
+2020-12-10T23:10:28.0729324+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) A data reader was disposed.
+2020-12-10T23:10:30.1730097+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) Creating DbCommand for '"ExecuteReader"'.
+2020-12-10T23:10:30.1740958+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) Created DbCommand for '"ExecuteReader"' (1ms).
+2020-12-10T23:10:30.1757591+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) Executing DbCommand [Parameters=["@__search_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [p].[ID], [p].[Approved], [p].[ApproverId], [p].[CategoryID], [p].[Content], [p].[Create], [p].[CreatorId], [p].[Published], [p].[Title], [p].[Update], [p].[category_string], [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[Header], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[content], [c].[ID], [c].[Content], [c].[Create], [c].[ParentID], [c].[PostID], [c].[PosterId]
+FROM [Posts] AS [p]
+LEFT JOIN [AspNetUsers] AS [a] ON [p].[CreatorId] = [a].[Id]
+LEFT JOIN [Comments] AS [c] ON [p].[ID] = [c].[PostID]
+WHERE ((@__search_0 = N'') OR (CHARINDEX(@__search_0, [p].[Title]) > 0)) OR ((@__search_0 = N'') OR (CHARINDEX(@__search_0, [p].[Content]) > 0))
+ORDER BY [p].[Update] DESC, [p].[ID], [c].[ID]"
+2020-12-10T23:10:30.1847608+03:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("9"ms) [Parameters=["@__search_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [p].[ID], [p].[Approved], [p].[ApproverId], [p].[CategoryID], [p].[Content], [p].[Create], [p].[CreatorId], [p].[Published], [p].[Title], [p].[Update], [p].[category_string], [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[Header], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[content], [c].[ID], [c].[Content], [c].[Create], [c].[ParentID], [c].[PostID], [c].[PosterId]
+FROM [Posts] AS [p]
+LEFT JOIN [AspNetUsers] AS [a] ON [p].[CreatorId] = [a].[Id]
+LEFT JOIN [Comments] AS [c] ON [p].[ID] = [c].[PostID]
+WHERE ((@__search_0 = N'') OR (CHARINDEX(@__search_0, [p].[Title]) > 0)) OR ((@__search_0 = N'') OR (CHARINDEX(@__search_0, [p].[Content]) > 0))
+ORDER BY [p].[Update] DESC, [p].[ID], [c].[ID]"
+2020-12-10T23:10:30.1897979+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) A data reader was disposed.
+2020-12-10T23:10:30.1904193+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) Creating DbCommand for '"ExecuteReader"'.
+2020-12-10T23:10:30.1907582+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) Created DbCommand for '"ExecuteReader"' (0ms).
+2020-12-10T23:10:30.1926603+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) Executing DbCommand [Parameters=["@__search_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [p].[ID], [p].[Approved], [p].[ApproverId], [p].[CategoryID], [p].[Content], [p].[Create], [p].[CreatorId], [p].[Published], [p].[Title], [p].[Update], [p].[category_string], [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[Header], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[content], [c].[ID], [c].[Content], [c].[Create], [c].[ParentID], [c].[PostID], [c].[PosterId]
+FROM [Posts] AS [p]
+LEFT JOIN [AspNetUsers] AS [a] ON [p].[CreatorId] = [a].[Id]
+LEFT JOIN [Comments] AS [c] ON [p].[ID] = [c].[PostID]
+WHERE ((@__search_0 = N'') OR (CHARINDEX(@__search_0, [p].[Title]) > 0)) OR ((@__search_0 = N'') OR (CHARINDEX(@__search_0, [p].[Content]) > 0))
+ORDER BY [p].[Update] DESC, [p].[ID], [c].[ID]"
+2020-12-10T23:10:30.1970440+03:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("4"ms) [Parameters=["@__search_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [p].[ID], [p].[Approved], [p].[ApproverId], [p].[CategoryID], [p].[Content], [p].[Create], [p].[CreatorId], [p].[Published], [p].[Title], [p].[Update], [p].[category_string], [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[Header], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[content], [c].[ID], [c].[Content], [c].[Create], [c].[ParentID], [c].[PostID], [c].[PosterId]
+FROM [Posts] AS [p]
+LEFT JOIN [AspNetUsers] AS [a] ON [p].[CreatorId] = [a].[Id]
+LEFT JOIN [Comments] AS [c] ON [p].[ID] = [c].[PostID]
+WHERE ((@__search_0 = N'') OR (CHARINDEX(@__search_0, [p].[Title]) > 0)) OR ((@__search_0 = N'') OR (CHARINDEX(@__search_0, [p].[Content]) > 0))
+ORDER BY [p].[Update] DESC, [p].[ID], [c].[ID]"
+2020-12-10T23:10:30.2017573+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) A data reader was disposed.
+2020-12-10T23:12:07.2561532+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) Creating DbCommand for '"ExecuteReader"'.
+2020-12-10T23:12:07.2575674+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) Created DbCommand for '"ExecuteReader"' (1ms).
+2020-12-10T23:12:07.2587310+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) Executing DbCommand [Parameters=["@__PostID_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [t].[ID], [t].[Approved], [t].[ApproverId], [t].[CategoryID], [t].[Content], [t].[Create], [t].[CreatorId], [t].[Published], [t].[Title], [t].[Update], [t].[category_string], [t].[Id0], [t].[AccessFailedCount], [t].[ConcurrencyStamp], [t].[Email], [t].[EmailConfirmed], [t].[FirstName], [t].[Header], [t].[LastName], [t].[LockoutEnabled], [t].[LockoutEnd], [t].[NormalizedEmail], [t].[NormalizedUserName], [t].[PasswordHash], [t].[PhoneNumber], [t].[PhoneNumberConfirmed], [t].[SecurityStamp], [t].[TwoFactorEnabled], [t].[UserName], [t].[content0], [t1].[ID], [t1].[Content], [t1].[Create], [t1].[ParentID], [t1].[PostID], [t1].[PosterId], [t1].[Id0], [t1].[AccessFailedCount], [t1].[ConcurrencyStamp], [t1].[Email], [t1].[EmailConfirmed], [t1].[FirstName], [t1].[Header], [t1].[LastName], [t1].[LockoutEnabled], [t1].[LockoutEnd], [t1].[NormalizedEmail], [t1].[NormalizedUserName], [t1].[PasswordHash], [t1].[PhoneNumber], [t1].[PhoneNumberConfirmed], [t1].[SecurityStamp], [t1].[TwoFactorEnabled], [t1].[UserName], [t1].[content0], [t1].[ID1], [t1].[Content1], [t1].[Create0], [t1].[ParentID0], [t1].[PostID0], [t1].[PosterId0], [t1].[ID00], [t1].[Content00], [t1].[Create00], [t1].[ParentID00], [t1].[PostID00], [t1].[PosterId00]
+FROM (
+    SELECT TOP(1) [p].[ID], [p].[Approved], [p].[ApproverId], [p].[CategoryID], [p].[Content], [p].[Create], [p].[CreatorId], [p].[Published], [p].[Title], [p].[Update], [p].[category_string], [a].[Id] AS [Id0], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[Header], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[content] AS [content0]
+    FROM [Posts] AS [p]
+    LEFT JOIN [AspNetUsers] AS [a] ON [p].[CreatorId] = [a].[Id]
+    WHERE [p].[ID] = @__PostID_0
+) AS [t]
+LEFT JOIN (
+    SELECT [c].[ID], [c].[Content], [c].[Create], [c].[ParentID], [c].[PostID], [c].[PosterId], [a0].[Id] AS [Id0], [a0].[AccessFailedCount], [a0].[ConcurrencyStamp], [a0].[Email], [a0].[EmailConfirmed], [a0].[FirstName], [a0].[Header], [a0].[LastName], [a0].[LockoutEnabled], [a0].[LockoutEnd], [a0].[NormalizedEmail], [a0].[NormalizedUserName], [a0].[PasswordHash], [a0].[PhoneNumber], [a0].[PhoneNumberConfirmed], [a0].[SecurityStamp], [a0].[TwoFactorEnabled], [a0].[UserName], [a0].[content] AS [content0], [t0].[ID] AS [ID1], [t0].[Content] AS [Content1], [t0].[Create] AS [Create0], [t0].[ParentID] AS [ParentID0], [t0].[PostID] AS [PostID0], [t0].[PosterId] AS [PosterId0], [t0].[ID0] AS [ID00], [t0].[Content0] AS [Content00], [t0].[Create0] AS [Create00], [t0].[ParentID0] AS [ParentID00], [t0].[PostID0] AS [PostID00], [t0].[PosterId0] AS [PosterId00]
+    FROM [Comments] AS [c]
+    LEFT JOIN [AspNetUsers] AS [a0] ON [c].[PosterId] = [a0].[Id]
+    LEFT JOIN (
+        SELECT [c0].[ID], [c0].[Content], [c0].[Create], [c0].[ParentID], [c0].[PostID], [c0].[PosterId], [c1].[ID] AS [ID0], [c1].[Content] AS [Content0], [c1].[Create] AS [Create0], [c1].[ParentID] AS [ParentID0], [c1].[PostID] AS [PostID0], [c1].[PosterId] AS [PosterId0]
+        FROM [Comments] AS [c0]
+        LEFT JOIN [Comments] AS [c1] ON [c0].[ParentID] = [c1].[ID]
+    ) AS [t0] ON [c].[ID] = [t0].[ParentID]
+) AS [t1] ON [t].[ID] = [t1].[PostID]
+ORDER BY [t].[ID], [t1].[ID], [t1].[ID1]"
+2020-12-10T23:12:07.2827589+03:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("24"ms) [Parameters=["@__PostID_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [t].[ID], [t].[Approved], [t].[ApproverId], [t].[CategoryID], [t].[Content], [t].[Create], [t].[CreatorId], [t].[Published], [t].[Title], [t].[Update], [t].[category_string], [t].[Id0], [t].[AccessFailedCount], [t].[ConcurrencyStamp], [t].[Email], [t].[EmailConfirmed], [t].[FirstName], [t].[Header], [t].[LastName], [t].[LockoutEnabled], [t].[LockoutEnd], [t].[NormalizedEmail], [t].[NormalizedUserName], [t].[PasswordHash], [t].[PhoneNumber], [t].[PhoneNumberConfirmed], [t].[SecurityStamp], [t].[TwoFactorEnabled], [t].[UserName], [t].[content0], [t1].[ID], [t1].[Content], [t1].[Create], [t1].[ParentID], [t1].[PostID], [t1].[PosterId], [t1].[Id0], [t1].[AccessFailedCount], [t1].[ConcurrencyStamp], [t1].[Email], [t1].[EmailConfirmed], [t1].[FirstName], [t1].[Header], [t1].[LastName], [t1].[LockoutEnabled], [t1].[LockoutEnd], [t1].[NormalizedEmail], [t1].[NormalizedUserName], [t1].[PasswordHash], [t1].[PhoneNumber], [t1].[PhoneNumberConfirmed], [t1].[SecurityStamp], [t1].[TwoFactorEnabled], [t1].[UserName], [t1].[content0], [t1].[ID1], [t1].[Content1], [t1].[Create0], [t1].[ParentID0], [t1].[PostID0], [t1].[PosterId0], [t1].[ID00], [t1].[Content00], [t1].[Create00], [t1].[ParentID00], [t1].[PostID00], [t1].[PosterId00]
+FROM (
+    SELECT TOP(1) [p].[ID], [p].[Approved], [p].[ApproverId], [p].[CategoryID], [p].[Content], [p].[Create], [p].[CreatorId], [p].[Published], [p].[Title], [p].[Update], [p].[category_string], [a].[Id] AS [Id0], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[Header], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[content] AS [content0]
+    FROM [Posts] AS [p]
+    LEFT JOIN [AspNetUsers] AS [a] ON [p].[CreatorId] = [a].[Id]
+    WHERE [p].[ID] = @__PostID_0
+) AS [t]
+LEFT JOIN (
+    SELECT [c].[ID], [c].[Content], [c].[Create], [c].[ParentID], [c].[PostID], [c].[PosterId], [a0].[Id] AS [Id0], [a0].[AccessFailedCount], [a0].[ConcurrencyStamp], [a0].[Email], [a0].[EmailConfirmed], [a0].[FirstName], [a0].[Header], [a0].[LastName], [a0].[LockoutEnabled], [a0].[LockoutEnd], [a0].[NormalizedEmail], [a0].[NormalizedUserName], [a0].[PasswordHash], [a0].[PhoneNumber], [a0].[PhoneNumberConfirmed], [a0].[SecurityStamp], [a0].[TwoFactorEnabled], [a0].[UserName], [a0].[content] AS [content0], [t0].[ID] AS [ID1], [t0].[Content] AS [Content1], [t0].[Create] AS [Create0], [t0].[ParentID] AS [ParentID0], [t0].[PostID] AS [PostID0], [t0].[PosterId] AS [PosterId0], [t0].[ID0] AS [ID00], [t0].[Content0] AS [Content00], [t0].[Create0] AS [Create00], [t0].[ParentID0] AS [ParentID00], [t0].[PostID0] AS [PostID00], [t0].[PosterId0] AS [PosterId00]
+    FROM [Comments] AS [c]
+    LEFT JOIN [AspNetUsers] AS [a0] ON [c].[PosterId] = [a0].[Id]
+    LEFT JOIN (
+        SELECT [c0].[ID], [c0].[Content], [c0].[Create], [c0].[ParentID], [c0].[PostID], [c0].[PosterId], [c1].[ID] AS [ID0], [c1].[Content] AS [Content0], [c1].[Create] AS [Create0], [c1].[ParentID] AS [ParentID0], [c1].[PostID] AS [PostID0], [c1].[PosterId] AS [PosterId0]
+        FROM [Comments] AS [c0]
+        LEFT JOIN [Comments] AS [c1] ON [c0].[ParentID] = [c1].[ID]
+    ) AS [t0] ON [c].[ID] = [t0].[ParentID]
+) AS [t1] ON [t].[ID] = [t1].[PostID]
+ORDER BY [t].[ID], [t1].[ID], [t1].[ID1]"
+2020-12-10T23:12:07.2957154+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) A data reader was disposed.
+2020-12-10T23:12:19.1412895+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) Creating DbCommand for '"ExecuteReader"'.
+2020-12-10T23:12:19.1423377+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) Created DbCommand for '"ExecuteReader"' (1ms).
+2020-12-10T23:12:19.1484778+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) Executing DbCommand [Parameters=["@__normalizedUserName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[Header], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[content]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0"
+2020-12-10T23:12:19.1676516+03:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("19"ms) [Parameters=["@__normalizedUserName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[Header], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[content]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0"
+2020-12-10T23:12:19.1840752+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) A data reader was disposed.
+2020-12-10T23:12:19.2599919+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) Creating DbCommand for '"ExecuteReader"'.
+2020-12-10T23:12:19.2606480+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) Created DbCommand for '"ExecuteReader"' (0ms).
+2020-12-10T23:12:19.2614301+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) Executing DbCommand [Parameters=["@__user_Id_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @__user_Id_0"
+2020-12-10T23:12:19.2659821+03:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("4"ms) [Parameters=["@__user_Id_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @__user_Id_0"
+2020-12-10T23:12:19.2686199+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) A data reader was disposed.
+2020-12-10T23:12:19.2967548+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) Creating DbCommand for '"ExecuteReader"'.
+2020-12-10T23:12:19.2977220+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) Created DbCommand for '"ExecuteReader"' (0ms).
+2020-12-10T23:12:19.2989432+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) Executing DbCommand [Parameters=["@__userId_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0"
+2020-12-10T23:12:19.3035008+03:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("5"ms) [Parameters=["@__userId_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0"
+2020-12-10T23:12:19.3050074+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) A data reader was disposed.
+2020-12-10T23:12:19.3147167+03:00 [INF] (Blog111.Areas.Identity.Pages.Account.LoginModel) User logged in.
+2020-12-10T23:12:19.3507054+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) Creating DbCommand for '"ExecuteReader"'.
+2020-12-10T23:12:19.3514776+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) Created DbCommand for '"ExecuteReader"' (0ms).
+2020-12-10T23:12:19.3524443+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) Executing DbCommand [Parameters=["@__PostID_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [t].[ID], [t].[Approved], [t].[ApproverId], [t].[CategoryID], [t].[Content], [t].[Create], [t].[CreatorId], [t].[Published], [t].[Title], [t].[Update], [t].[category_string], [t].[Id0], [t].[AccessFailedCount], [t].[ConcurrencyStamp], [t].[Email], [t].[EmailConfirmed], [t].[FirstName], [t].[Header], [t].[LastName], [t].[LockoutEnabled], [t].[LockoutEnd], [t].[NormalizedEmail], [t].[NormalizedUserName], [t].[PasswordHash], [t].[PhoneNumber], [t].[PhoneNumberConfirmed], [t].[SecurityStamp], [t].[TwoFactorEnabled], [t].[UserName], [t].[content0], [t1].[ID], [t1].[Content], [t1].[Create], [t1].[ParentID], [t1].[PostID], [t1].[PosterId], [t1].[Id0], [t1].[AccessFailedCount], [t1].[ConcurrencyStamp], [t1].[Email], [t1].[EmailConfirmed], [t1].[FirstName], [t1].[Header], [t1].[LastName], [t1].[LockoutEnabled], [t1].[LockoutEnd], [t1].[NormalizedEmail], [t1].[NormalizedUserName], [t1].[PasswordHash], [t1].[PhoneNumber], [t1].[PhoneNumberConfirmed], [t1].[SecurityStamp], [t1].[TwoFactorEnabled], [t1].[UserName], [t1].[content0], [t1].[ID1], [t1].[Content1], [t1].[Create0], [t1].[ParentID0], [t1].[PostID0], [t1].[PosterId0], [t1].[ID00], [t1].[Content00], [t1].[Create00], [t1].[ParentID00], [t1].[PostID00], [t1].[PosterId00]
+FROM (
+    SELECT TOP(1) [p].[ID], [p].[Approved], [p].[ApproverId], [p].[CategoryID], [p].[Content], [p].[Create], [p].[CreatorId], [p].[Published], [p].[Title], [p].[Update], [p].[category_string], [a].[Id] AS [Id0], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[Header], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[content] AS [content0]
+    FROM [Posts] AS [p]
+    LEFT JOIN [AspNetUsers] AS [a] ON [p].[CreatorId] = [a].[Id]
+    WHERE [p].[ID] = @__PostID_0
+) AS [t]
+LEFT JOIN (
+    SELECT [c].[ID], [c].[Content], [c].[Create], [c].[ParentID], [c].[PostID], [c].[PosterId], [a0].[Id] AS [Id0], [a0].[AccessFailedCount], [a0].[ConcurrencyStamp], [a0].[Email], [a0].[EmailConfirmed], [a0].[FirstName], [a0].[Header], [a0].[LastName], [a0].[LockoutEnabled], [a0].[LockoutEnd], [a0].[NormalizedEmail], [a0].[NormalizedUserName], [a0].[PasswordHash], [a0].[PhoneNumber], [a0].[PhoneNumberConfirmed], [a0].[SecurityStamp], [a0].[TwoFactorEnabled], [a0].[UserName], [a0].[content] AS [content0], [t0].[ID] AS [ID1], [t0].[Content] AS [Content1], [t0].[Create] AS [Create0], [t0].[ParentID] AS [ParentID0], [t0].[PostID] AS [PostID0], [t0].[PosterId] AS [PosterId0], [t0].[ID0] AS [ID00], [t0].[Content0] AS [Content00], [t0].[Create0] AS [Create00], [t0].[ParentID0] AS [ParentID00], [t0].[PostID0] AS [PostID00], [t0].[PosterId0] AS [PosterId00]
+    FROM [Comments] AS [c]
+    LEFT JOIN [AspNetUsers] AS [a0] ON [c].[PosterId] = [a0].[Id]
+    LEFT JOIN (
+        SELECT [c0].[ID], [c0].[Content], [c0].[Create], [c0].[ParentID], [c0].[PostID], [c0].[PosterId], [c1].[ID] AS [ID0], [c1].[Content] AS [Content0], [c1].[Create] AS [Create0], [c1].[ParentID] AS [ParentID0], [c1].[PostID] AS [PostID0], [c1].[PosterId] AS [PosterId0]
+        FROM [Comments] AS [c0]
+        LEFT JOIN [Comments] AS [c1] ON [c0].[ParentID] = [c1].[ID]
+    ) AS [t0] ON [c].[ID] = [t0].[ParentID]
+) AS [t1] ON [t].[ID] = [t1].[PostID]
+ORDER BY [t].[ID], [t1].[ID], [t1].[ID1]"
+2020-12-10T23:12:19.3686225+03:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("16"ms) [Parameters=["@__PostID_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [t].[ID], [t].[Approved], [t].[ApproverId], [t].[CategoryID], [t].[Content], [t].[Create], [t].[CreatorId], [t].[Published], [t].[Title], [t].[Update], [t].[category_string], [t].[Id0], [t].[AccessFailedCount], [t].[ConcurrencyStamp], [t].[Email], [t].[EmailConfirmed], [t].[FirstName], [t].[Header], [t].[LastName], [t].[LockoutEnabled], [t].[LockoutEnd], [t].[NormalizedEmail], [t].[NormalizedUserName], [t].[PasswordHash], [t].[PhoneNumber], [t].[PhoneNumberConfirmed], [t].[SecurityStamp], [t].[TwoFactorEnabled], [t].[UserName], [t].[content0], [t1].[ID], [t1].[Content], [t1].[Create], [t1].[ParentID], [t1].[PostID], [t1].[PosterId], [t1].[Id0], [t1].[AccessFailedCount], [t1].[ConcurrencyStamp], [t1].[Email], [t1].[EmailConfirmed], [t1].[FirstName], [t1].[Header], [t1].[LastName], [t1].[LockoutEnabled], [t1].[LockoutEnd], [t1].[NormalizedEmail], [t1].[NormalizedUserName], [t1].[PasswordHash], [t1].[PhoneNumber], [t1].[PhoneNumberConfirmed], [t1].[SecurityStamp], [t1].[TwoFactorEnabled], [t1].[UserName], [t1].[content0], [t1].[ID1], [t1].[Content1], [t1].[Create0], [t1].[ParentID0], [t1].[PostID0], [t1].[PosterId0], [t1].[ID00], [t1].[Content00], [t1].[Create00], [t1].[ParentID00], [t1].[PostID00], [t1].[PosterId00]
+FROM (
+    SELECT TOP(1) [p].[ID], [p].[Approved], [p].[ApproverId], [p].[CategoryID], [p].[Content], [p].[Create], [p].[CreatorId], [p].[Published], [p].[Title], [p].[Update], [p].[category_string], [a].[Id] AS [Id0], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[Header], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[content] AS [content0]
+    FROM [Posts] AS [p]
+    LEFT JOIN [AspNetUsers] AS [a] ON [p].[CreatorId] = [a].[Id]
+    WHERE [p].[ID] = @__PostID_0
+) AS [t]
+LEFT JOIN (
+    SELECT [c].[ID], [c].[Content], [c].[Create], [c].[ParentID], [c].[PostID], [c].[PosterId], [a0].[Id] AS [Id0], [a0].[AccessFailedCount], [a0].[ConcurrencyStamp], [a0].[Email], [a0].[EmailConfirmed], [a0].[FirstName], [a0].[Header], [a0].[LastName], [a0].[LockoutEnabled], [a0].[LockoutEnd], [a0].[NormalizedEmail], [a0].[NormalizedUserName], [a0].[PasswordHash], [a0].[PhoneNumber], [a0].[PhoneNumberConfirmed], [a0].[SecurityStamp], [a0].[TwoFactorEnabled], [a0].[UserName], [a0].[content] AS [content0], [t0].[ID] AS [ID1], [t0].[Content] AS [Content1], [t0].[Create] AS [Create0], [t0].[ParentID] AS [ParentID0], [t0].[PostID] AS [PostID0], [t0].[PosterId] AS [PosterId0], [t0].[ID0] AS [ID00], [t0].[Content0] AS [Content00], [t0].[Create0] AS [Create00], [t0].[ParentID0] AS [ParentID00], [t0].[PostID0] AS [PostID00], [t0].[PosterId0] AS [PosterId00]
+    FROM [Comments] AS [c]
+    LEFT JOIN [AspNetUsers] AS [a0] ON [c].[PosterId] = [a0].[Id]
+    LEFT JOIN (
+        SELECT [c0].[ID], [c0].[Content], [c0].[Create], [c0].[ParentID], [c0].[PostID], [c0].[PosterId], [c1].[ID] AS [ID0], [c1].[Content] AS [Content0], [c1].[Create] AS [Create0], [c1].[ParentID] AS [ParentID0], [c1].[PostID] AS [PostID0], [c1].[PosterId] AS [PosterId0]
+        FROM [Comments] AS [c0]
+        LEFT JOIN [Comments] AS [c1] ON [c0].[ParentID] = [c1].[ID]
+    ) AS [t0] ON [c].[ID] = [t0].[ParentID]
+) AS [t1] ON [t].[ID] = [t1].[PostID]
+ORDER BY [t].[ID], [t1].[ID], [t1].[ID1]"
+2020-12-10T23:12:19.3761935+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) A data reader was disposed.
+2020-12-10T23:12:19.3885073+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) Creating DbCommand for '"ExecuteReader"'.
+2020-12-10T23:12:19.3889756+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) Created DbCommand for '"ExecuteReader"' (0ms).
+2020-12-10T23:12:19.3897734+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) Executing DbCommand [Parameters=["@__p_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[Header], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[content]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[Id] = @__p_0"
+2020-12-10T23:12:19.3931974+03:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("3"ms) [Parameters=["@__p_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[Header], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[content]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[Id] = @__p_0"
+2020-12-10T23:12:19.3971562+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) A data reader was disposed.
+2020-12-10T23:13:22.9033731+03:00 [INF] (Microsoft.Hosting.Lifetime) Now listening on: "https://localhost:5001"
+2020-12-10T23:13:22.9629142+03:00 [INF] (Microsoft.Hosting.Lifetime) Now listening on: "http://localhost:5000"
+2020-12-10T23:13:22.9669791+03:00 [INF] (Microsoft.Hosting.Lifetime) Application started. Press Ctrl+C to shut down.
+2020-12-10T23:13:22.9673757+03:00 [INF] (Microsoft.Hosting.Lifetime) Hosting environment: "Development"
+2020-12-10T23:13:22.9677587+03:00 [INF] (Microsoft.Hosting.Lifetime) Content root path: "C:\Users\vladf\source\repos\Blog111"
+2020-12-10T23:13:25.3178368+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) Creating DbCommand for '"ExecuteReader"'.
+2020-12-10T23:13:25.3600623+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) Created DbCommand for '"ExecuteReader"' (44ms).
+2020-12-10T23:13:25.6739769+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) Executing DbCommand [Parameters=["@__search_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [p].[ID], [p].[Approved], [p].[ApproverId], [p].[CategoryID], [p].[Content], [p].[Create], [p].[CreatorId], [p].[Published], [p].[Title], [p].[Update], [p].[category_string], [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[Header], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[content], [c].[ID], [c].[Content], [c].[Create], [c].[ParentID], [c].[PostID], [c].[PosterId]
+FROM [Posts] AS [p]
+LEFT JOIN [AspNetUsers] AS [a] ON [p].[CreatorId] = [a].[Id]
+LEFT JOIN [Comments] AS [c] ON [p].[ID] = [c].[PostID]
+WHERE ((@__search_0 = N'') OR (CHARINDEX(@__search_0, [p].[Title]) > 0)) OR ((@__search_0 = N'') OR (CHARINDEX(@__search_0, [p].[Content]) > 0))
+ORDER BY [p].[Update] DESC, [p].[ID], [c].[ID]"
+2020-12-10T23:13:25.7379489+03:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("71"ms) [Parameters=["@__search_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [p].[ID], [p].[Approved], [p].[ApproverId], [p].[CategoryID], [p].[Content], [p].[Create], [p].[CreatorId], [p].[Published], [p].[Title], [p].[Update], [p].[category_string], [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[Header], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[content], [c].[ID], [c].[Content], [c].[Create], [c].[ParentID], [c].[PostID], [c].[PosterId]
+FROM [Posts] AS [p]
+LEFT JOIN [AspNetUsers] AS [a] ON [p].[CreatorId] = [a].[Id]
+LEFT JOIN [Comments] AS [c] ON [p].[ID] = [c].[PostID]
+WHERE ((@__search_0 = N'') OR (CHARINDEX(@__search_0, [p].[Title]) > 0)) OR ((@__search_0 = N'') OR (CHARINDEX(@__search_0, [p].[Content]) > 0))
+ORDER BY [p].[Update] DESC, [p].[ID], [c].[ID]"
+2020-12-10T23:13:25.8900321+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) A data reader was disposed.
+2020-12-10T23:13:25.9055789+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) Creating DbCommand for '"ExecuteReader"'.
+2020-12-10T23:13:25.9061176+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) Created DbCommand for '"ExecuteReader"' (0ms).
+2020-12-10T23:13:25.9080655+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) Executing DbCommand [Parameters=["@__search_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [p].[ID], [p].[Approved], [p].[ApproverId], [p].[CategoryID], [p].[Content], [p].[Create], [p].[CreatorId], [p].[Published], [p].[Title], [p].[Update], [p].[category_string], [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[Header], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[content], [c].[ID], [c].[Content], [c].[Create], [c].[ParentID], [c].[PostID], [c].[PosterId]
+FROM [Posts] AS [p]
+LEFT JOIN [AspNetUsers] AS [a] ON [p].[CreatorId] = [a].[Id]
+LEFT JOIN [Comments] AS [c] ON [p].[ID] = [c].[PostID]
+WHERE ((@__search_0 = N'') OR (CHARINDEX(@__search_0, [p].[Title]) > 0)) OR ((@__search_0 = N'') OR (CHARINDEX(@__search_0, [p].[Content]) > 0))
+ORDER BY [p].[Update] DESC, [p].[ID], [c].[ID]"
+2020-12-10T23:13:25.9146420+03:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("6"ms) [Parameters=["@__search_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [p].[ID], [p].[Approved], [p].[ApproverId], [p].[CategoryID], [p].[Content], [p].[Create], [p].[CreatorId], [p].[Published], [p].[Title], [p].[Update], [p].[category_string], [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[Header], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[content], [c].[ID], [c].[Content], [c].[Create], [c].[ParentID], [c].[PostID], [c].[PosterId]
+FROM [Posts] AS [p]
+LEFT JOIN [AspNetUsers] AS [a] ON [p].[CreatorId] = [a].[Id]
+LEFT JOIN [Comments] AS [c] ON [p].[ID] = [c].[PostID]
+WHERE ((@__search_0 = N'') OR (CHARINDEX(@__search_0, [p].[Title]) > 0)) OR ((@__search_0 = N'') OR (CHARINDEX(@__search_0, [p].[Content]) > 0))
+ORDER BY [p].[Update] DESC, [p].[ID], [c].[ID]"
+2020-12-10T23:13:25.9193440+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) A data reader was disposed.
+2020-12-10T23:13:29.4625917+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) Creating DbCommand for '"ExecuteReader"'.
+2020-12-10T23:13:29.4650782+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) Created DbCommand for '"ExecuteReader"' (2ms).
+2020-12-10T23:13:29.4682578+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) Executing DbCommand [Parameters=["@__PostID_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [t].[ID], [t].[Approved], [t].[ApproverId], [t].[CategoryID], [t].[Content], [t].[Create], [t].[CreatorId], [t].[Published], [t].[Title], [t].[Update], [t].[category_string], [t].[Id0], [t].[AccessFailedCount], [t].[ConcurrencyStamp], [t].[Email], [t].[EmailConfirmed], [t].[FirstName], [t].[Header], [t].[LastName], [t].[LockoutEnabled], [t].[LockoutEnd], [t].[NormalizedEmail], [t].[NormalizedUserName], [t].[PasswordHash], [t].[PhoneNumber], [t].[PhoneNumberConfirmed], [t].[SecurityStamp], [t].[TwoFactorEnabled], [t].[UserName], [t].[content0], [t1].[ID], [t1].[Content], [t1].[Create], [t1].[ParentID], [t1].[PostID], [t1].[PosterId], [t1].[Id0], [t1].[AccessFailedCount], [t1].[ConcurrencyStamp], [t1].[Email], [t1].[EmailConfirmed], [t1].[FirstName], [t1].[Header], [t1].[LastName], [t1].[LockoutEnabled], [t1].[LockoutEnd], [t1].[NormalizedEmail], [t1].[NormalizedUserName], [t1].[PasswordHash], [t1].[PhoneNumber], [t1].[PhoneNumberConfirmed], [t1].[SecurityStamp], [t1].[TwoFactorEnabled], [t1].[UserName], [t1].[content0], [t1].[ID1], [t1].[Content1], [t1].[Create0], [t1].[ParentID0], [t1].[PostID0], [t1].[PosterId0], [t1].[ID00], [t1].[Content00], [t1].[Create00], [t1].[ParentID00], [t1].[PostID00], [t1].[PosterId00]
+FROM (
+    SELECT TOP(1) [p].[ID], [p].[Approved], [p].[ApproverId], [p].[CategoryID], [p].[Content], [p].[Create], [p].[CreatorId], [p].[Published], [p].[Title], [p].[Update], [p].[category_string], [a].[Id] AS [Id0], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[Header], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[content] AS [content0]
+    FROM [Posts] AS [p]
+    LEFT JOIN [AspNetUsers] AS [a] ON [p].[CreatorId] = [a].[Id]
+    WHERE [p].[ID] = @__PostID_0
+) AS [t]
+LEFT JOIN (
+    SELECT [c].[ID], [c].[Content], [c].[Create], [c].[ParentID], [c].[PostID], [c].[PosterId], [a0].[Id] AS [Id0], [a0].[AccessFailedCount], [a0].[ConcurrencyStamp], [a0].[Email], [a0].[EmailConfirmed], [a0].[FirstName], [a0].[Header], [a0].[LastName], [a0].[LockoutEnabled], [a0].[LockoutEnd], [a0].[NormalizedEmail], [a0].[NormalizedUserName], [a0].[PasswordHash], [a0].[PhoneNumber], [a0].[PhoneNumberConfirmed], [a0].[SecurityStamp], [a0].[TwoFactorEnabled], [a0].[UserName], [a0].[content] AS [content0], [t0].[ID] AS [ID1], [t0].[Content] AS [Content1], [t0].[Create] AS [Create0], [t0].[ParentID] AS [ParentID0], [t0].[PostID] AS [PostID0], [t0].[PosterId] AS [PosterId0], [t0].[ID0] AS [ID00], [t0].[Content0] AS [Content00], [t0].[Create0] AS [Create00], [t0].[ParentID0] AS [ParentID00], [t0].[PostID0] AS [PostID00], [t0].[PosterId0] AS [PosterId00]
+    FROM [Comments] AS [c]
+    LEFT JOIN [AspNetUsers] AS [a0] ON [c].[PosterId] = [a0].[Id]
+    LEFT JOIN (
+        SELECT [c0].[ID], [c0].[Content], [c0].[Create], [c0].[ParentID], [c0].[PostID], [c0].[PosterId], [c1].[ID] AS [ID0], [c1].[Content] AS [Content0], [c1].[Create] AS [Create0], [c1].[ParentID] AS [ParentID0], [c1].[PostID] AS [PostID0], [c1].[PosterId] AS [PosterId0]
+        FROM [Comments] AS [c0]
+        LEFT JOIN [Comments] AS [c1] ON [c0].[ParentID] = [c1].[ID]
+    ) AS [t0] ON [c].[ID] = [t0].[ParentID]
+) AS [t1] ON [t].[ID] = [t1].[PostID]
+ORDER BY [t].[ID], [t1].[ID], [t1].[ID1]"
+2020-12-10T23:13:29.4890429+03:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("21"ms) [Parameters=["@__PostID_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [t].[ID], [t].[Approved], [t].[ApproverId], [t].[CategoryID], [t].[Content], [t].[Create], [t].[CreatorId], [t].[Published], [t].[Title], [t].[Update], [t].[category_string], [t].[Id0], [t].[AccessFailedCount], [t].[ConcurrencyStamp], [t].[Email], [t].[EmailConfirmed], [t].[FirstName], [t].[Header], [t].[LastName], [t].[LockoutEnabled], [t].[LockoutEnd], [t].[NormalizedEmail], [t].[NormalizedUserName], [t].[PasswordHash], [t].[PhoneNumber], [t].[PhoneNumberConfirmed], [t].[SecurityStamp], [t].[TwoFactorEnabled], [t].[UserName], [t].[content0], [t1].[ID], [t1].[Content], [t1].[Create], [t1].[ParentID], [t1].[PostID], [t1].[PosterId], [t1].[Id0], [t1].[AccessFailedCount], [t1].[ConcurrencyStamp], [t1].[Email], [t1].[EmailConfirmed], [t1].[FirstName], [t1].[Header], [t1].[LastName], [t1].[LockoutEnabled], [t1].[LockoutEnd], [t1].[NormalizedEmail], [t1].[NormalizedUserName], [t1].[PasswordHash], [t1].[PhoneNumber], [t1].[PhoneNumberConfirmed], [t1].[SecurityStamp], [t1].[TwoFactorEnabled], [t1].[UserName], [t1].[content0], [t1].[ID1], [t1].[Content1], [t1].[Create0], [t1].[ParentID0], [t1].[PostID0], [t1].[PosterId0], [t1].[ID00], [t1].[Content00], [t1].[Create00], [t1].[ParentID00], [t1].[PostID00], [t1].[PosterId00]
+FROM (
+    SELECT TOP(1) [p].[ID], [p].[Approved], [p].[ApproverId], [p].[CategoryID], [p].[Content], [p].[Create], [p].[CreatorId], [p].[Published], [p].[Title], [p].[Update], [p].[category_string], [a].[Id] AS [Id0], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[Header], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[content] AS [content0]
+    FROM [Posts] AS [p]
+    LEFT JOIN [AspNetUsers] AS [a] ON [p].[CreatorId] = [a].[Id]
+    WHERE [p].[ID] = @__PostID_0
+) AS [t]
+LEFT JOIN (
+    SELECT [c].[ID], [c].[Content], [c].[Create], [c].[ParentID], [c].[PostID], [c].[PosterId], [a0].[Id] AS [Id0], [a0].[AccessFailedCount], [a0].[ConcurrencyStamp], [a0].[Email], [a0].[EmailConfirmed], [a0].[FirstName], [a0].[Header], [a0].[LastName], [a0].[LockoutEnabled], [a0].[LockoutEnd], [a0].[NormalizedEmail], [a0].[NormalizedUserName], [a0].[PasswordHash], [a0].[PhoneNumber], [a0].[PhoneNumberConfirmed], [a0].[SecurityStamp], [a0].[TwoFactorEnabled], [a0].[UserName], [a0].[content] AS [content0], [t0].[ID] AS [ID1], [t0].[Content] AS [Content1], [t0].[Create] AS [Create0], [t0].[ParentID] AS [ParentID0], [t0].[PostID] AS [PostID0], [t0].[PosterId] AS [PosterId0], [t0].[ID0] AS [ID00], [t0].[Content0] AS [Content00], [t0].[Create0] AS [Create00], [t0].[ParentID0] AS [ParentID00], [t0].[PostID0] AS [PostID00], [t0].[PosterId0] AS [PosterId00]
+    FROM [Comments] AS [c]
+    LEFT JOIN [AspNetUsers] AS [a0] ON [c].[PosterId] = [a0].[Id]
+    LEFT JOIN (
+        SELECT [c0].[ID], [c0].[Content], [c0].[Create], [c0].[ParentID], [c0].[PostID], [c0].[PosterId], [c1].[ID] AS [ID0], [c1].[Content] AS [Content0], [c1].[Create] AS [Create0], [c1].[ParentID] AS [ParentID0], [c1].[PostID] AS [PostID0], [c1].[PosterId] AS [PosterId0]
+        FROM [Comments] AS [c0]
+        LEFT JOIN [Comments] AS [c1] ON [c0].[ParentID] = [c1].[ID]
+    ) AS [t0] ON [c].[ID] = [t0].[ParentID]
+) AS [t1] ON [t].[ID] = [t1].[PostID]
+ORDER BY [t].[ID], [t1].[ID], [t1].[ID1]"
+2020-12-10T23:13:29.5036685+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) A data reader was disposed.
+2020-12-10T23:13:29.5268242+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) Creating DbCommand for '"ExecuteReader"'.
+2020-12-10T23:13:29.5275149+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) Created DbCommand for '"ExecuteReader"' (0ms).
+2020-12-10T23:13:29.5338139+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) Executing DbCommand [Parameters=["@__p_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[Header], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[content]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[Id] = @__p_0"
+2020-12-10T23:13:29.5502603+03:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("16"ms) [Parameters=["@__p_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[Header], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[content]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[Id] = @__p_0"
+2020-12-10T23:13:29.5665580+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) A data reader was disposed.
+2020-12-10T23:14:11.3668936+03:00 [INF] (Microsoft.Hosting.Lifetime) Now listening on: "https://localhost:5001"
+2020-12-10T23:14:11.4497418+03:00 [INF] (Microsoft.Hosting.Lifetime) Now listening on: "http://localhost:5000"
+2020-12-10T23:14:11.4531622+03:00 [INF] (Microsoft.Hosting.Lifetime) Application started. Press Ctrl+C to shut down.
+2020-12-10T23:14:11.4534879+03:00 [INF] (Microsoft.Hosting.Lifetime) Hosting environment: "Development"
+2020-12-10T23:14:11.4537771+03:00 [INF] (Microsoft.Hosting.Lifetime) Content root path: "C:\Users\vladf\source\repos\Blog111"
+2020-12-10T23:14:13.8159124+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) Creating DbCommand for '"ExecuteReader"'.
+2020-12-10T23:14:13.8615804+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) Created DbCommand for '"ExecuteReader"' (45ms).
+2020-12-10T23:14:14.1232215+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) Executing DbCommand [Parameters=["@__search_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [p].[ID], [p].[Approved], [p].[ApproverId], [p].[CategoryID], [p].[Content], [p].[Create], [p].[CreatorId], [p].[Published], [p].[Title], [p].[Update], [p].[category_string], [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[Header], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[content], [c].[ID], [c].[Content], [c].[Create], [c].[ParentID], [c].[PostID], [c].[PosterId]
+FROM [Posts] AS [p]
+LEFT JOIN [AspNetUsers] AS [a] ON [p].[CreatorId] = [a].[Id]
+LEFT JOIN [Comments] AS [c] ON [p].[ID] = [c].[PostID]
+WHERE ((@__search_0 = N'') OR (CHARINDEX(@__search_0, [p].[Title]) > 0)) OR ((@__search_0 = N'') OR (CHARINDEX(@__search_0, [p].[Content]) > 0))
+ORDER BY [p].[Update] DESC, [p].[ID], [c].[ID]"
+2020-12-10T23:14:14.1856840+03:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("70"ms) [Parameters=["@__search_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [p].[ID], [p].[Approved], [p].[ApproverId], [p].[CategoryID], [p].[Content], [p].[Create], [p].[CreatorId], [p].[Published], [p].[Title], [p].[Update], [p].[category_string], [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[Header], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[content], [c].[ID], [c].[Content], [c].[Create], [c].[ParentID], [c].[PostID], [c].[PosterId]
+FROM [Posts] AS [p]
+LEFT JOIN [AspNetUsers] AS [a] ON [p].[CreatorId] = [a].[Id]
+LEFT JOIN [Comments] AS [c] ON [p].[ID] = [c].[PostID]
+WHERE ((@__search_0 = N'') OR (CHARINDEX(@__search_0, [p].[Title]) > 0)) OR ((@__search_0 = N'') OR (CHARINDEX(@__search_0, [p].[Content]) > 0))
+ORDER BY [p].[Update] DESC, [p].[ID], [c].[ID]"
+2020-12-10T23:14:14.3332680+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) A data reader was disposed.
+2020-12-10T23:14:14.3475058+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) Creating DbCommand for '"ExecuteReader"'.
+2020-12-10T23:14:14.3482471+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) Created DbCommand for '"ExecuteReader"' (0ms).
+2020-12-10T23:14:14.3530363+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) Executing DbCommand [Parameters=["@__search_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [p].[ID], [p].[Approved], [p].[ApproverId], [p].[CategoryID], [p].[Content], [p].[Create], [p].[CreatorId], [p].[Published], [p].[Title], [p].[Update], [p].[category_string], [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[Header], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[content], [c].[ID], [c].[Content], [c].[Create], [c].[ParentID], [c].[PostID], [c].[PosterId]
+FROM [Posts] AS [p]
+LEFT JOIN [AspNetUsers] AS [a] ON [p].[CreatorId] = [a].[Id]
+LEFT JOIN [Comments] AS [c] ON [p].[ID] = [c].[PostID]
+WHERE ((@__search_0 = N'') OR (CHARINDEX(@__search_0, [p].[Title]) > 0)) OR ((@__search_0 = N'') OR (CHARINDEX(@__search_0, [p].[Content]) > 0))
+ORDER BY [p].[Update] DESC, [p].[ID], [c].[ID]"
+2020-12-10T23:14:14.3605981+03:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("8"ms) [Parameters=["@__search_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [p].[ID], [p].[Approved], [p].[ApproverId], [p].[CategoryID], [p].[Content], [p].[Create], [p].[CreatorId], [p].[Published], [p].[Title], [p].[Update], [p].[category_string], [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[Header], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[content], [c].[ID], [c].[Content], [c].[Create], [c].[ParentID], [c].[PostID], [c].[PosterId]
+FROM [Posts] AS [p]
+LEFT JOIN [AspNetUsers] AS [a] ON [p].[CreatorId] = [a].[Id]
+LEFT JOIN [Comments] AS [c] ON [p].[ID] = [c].[PostID]
+WHERE ((@__search_0 = N'') OR (CHARINDEX(@__search_0, [p].[Title]) > 0)) OR ((@__search_0 = N'') OR (CHARINDEX(@__search_0, [p].[Content]) > 0))
+ORDER BY [p].[Update] DESC, [p].[ID], [c].[ID]"
+2020-12-10T23:14:14.3652920+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) A data reader was disposed.
+2020-12-10T23:14:17.9805146+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) Creating DbCommand for '"ExecuteReader"'.
+2020-12-10T23:14:17.9820274+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) Created DbCommand for '"ExecuteReader"' (1ms).
+2020-12-10T23:14:17.9888939+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) Executing DbCommand [Parameters=["@__p_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[Header], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[content]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[Id] = @__p_0"
+2020-12-10T23:14:18.0069441+03:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("18"ms) [Parameters=["@__p_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[Header], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[content]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[Id] = @__p_0"
+2020-12-10T23:14:18.0200444+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) A data reader was disposed.
+2020-12-10T23:14:18.0695744+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) Creating DbCommand for '"ExecuteReader"'.
+2020-12-10T23:14:18.0704277+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) Created DbCommand for '"ExecuteReader"' (0ms).
+2020-12-10T23:14:18.0712542+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) Executing DbCommand [Parameters=["@__entity_equality_user_0_Id='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [p].[ID], [p].[Approved], [p].[ApproverId], [p].[CategoryID], [p].[Content], [p].[Create], [p].[CreatorId], [p].[Published], [p].[Title], [p].[Update], [p].[category_string], [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[Header], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[content], [a0].[Id], [a0].[AccessFailedCount], [a0].[ConcurrencyStamp], [a0].[Email], [a0].[EmailConfirmed], [a0].[FirstName], [a0].[Header], [a0].[LastName], [a0].[LockoutEnabled], [a0].[LockoutEnd], [a0].[NormalizedEmail], [a0].[NormalizedUserName], [a0].[PasswordHash], [a0].[PhoneNumber], [a0].[PhoneNumberConfirmed], [a0].[SecurityStamp], [a0].[TwoFactorEnabled], [a0].[UserName], [a0].[content], [c].[ID], [c].[Content], [c].[Create], [c].[ParentID], [c].[PostID], [c].[PosterId]
+FROM [Posts] AS [p]
+LEFT JOIN [AspNetUsers] AS [a] ON [p].[CreatorId] = [a].[Id]
+LEFT JOIN [AspNetUsers] AS [a0] ON [p].[ApproverId] = [a0].[Id]
+LEFT JOIN [Comments] AS [c] ON [p].[ID] = [c].[PostID]
+WHERE [a].[Id] = @__entity_equality_user_0_Id
+ORDER BY [p].[ID], [c].[ID]"
+2020-12-10T23:14:18.0793850+03:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("8"ms) [Parameters=["@__entity_equality_user_0_Id='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [p].[ID], [p].[Approved], [p].[ApproverId], [p].[CategoryID], [p].[Content], [p].[Create], [p].[CreatorId], [p].[Published], [p].[Title], [p].[Update], [p].[category_string], [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[Header], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[content], [a0].[Id], [a0].[AccessFailedCount], [a0].[ConcurrencyStamp], [a0].[Email], [a0].[EmailConfirmed], [a0].[FirstName], [a0].[Header], [a0].[LastName], [a0].[LockoutEnabled], [a0].[LockoutEnd], [a0].[NormalizedEmail], [a0].[NormalizedUserName], [a0].[PasswordHash], [a0].[PhoneNumber], [a0].[PhoneNumberConfirmed], [a0].[SecurityStamp], [a0].[TwoFactorEnabled], [a0].[UserName], [a0].[content], [c].[ID], [c].[Content], [c].[Create], [c].[ParentID], [c].[PostID], [c].[PosterId]
+FROM [Posts] AS [p]
+LEFT JOIN [AspNetUsers] AS [a] ON [p].[CreatorId] = [a].[Id]
+LEFT JOIN [AspNetUsers] AS [a0] ON [p].[ApproverId] = [a0].[Id]
+LEFT JOIN [Comments] AS [c] ON [p].[ID] = [c].[PostID]
+WHERE [a].[Id] = @__entity_equality_user_0_Id
+ORDER BY [p].[ID], [c].[ID]"
+2020-12-10T23:14:18.0948405+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) A data reader was disposed.
+2020-12-10T23:14:20.5160894+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) Creating DbCommand for '"ExecuteReader"'.
+2020-12-10T23:14:20.5174779+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) Created DbCommand for '"ExecuteReader"' (1ms).
+2020-12-10T23:14:20.5185968+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) Executing DbCommand [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [c].[ID], [c].[Description], [c].[Title]
+FROM [Categories] AS [c]"
+2020-12-10T23:14:20.5214642+03:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [c].[ID], [c].[Description], [c].[Title]
+FROM [Categories] AS [c]"
+2020-12-10T23:14:20.5267654+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) A data reader was disposed.
+2020-12-10T23:14:24.1893598+03:00 [INF] (Blog111.Controllers.BlogController) Post Created
+2020-12-10T23:14:24.2692741+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) Creating DbCommand for '"ExecuteReader"'.
+2020-12-10T23:14:24.2699953+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) Created DbCommand for '"ExecuteReader"' (0ms).
+2020-12-10T23:14:24.2708407+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) Executing DbCommand [Parameters=["@__p_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[Header], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[content]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[Id] = @__p_0"
+2020-12-10T23:14:24.2745564+03:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("4"ms) [Parameters=["@__p_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[Header], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[content]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[Id] = @__p_0"
+2020-12-10T23:14:24.2762549+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) A data reader was disposed.
+2020-12-10T23:14:45.0386477+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) Creating DbCommand for '"ExecuteReader"'.
+2020-12-10T23:14:45.0420958+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) Created DbCommand for '"ExecuteReader"' (3ms).
+2020-12-10T23:14:45.0435248+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) Executing DbCommand [Parameters=["@__p_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[Header], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[content]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[Id] = @__p_0"
+2020-12-10T23:14:45.0497043+03:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("6"ms) [Parameters=["@__p_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[Header], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[content]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[Id] = @__p_0"
+2020-12-10T23:14:45.0531596+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) A data reader was disposed.
+2020-12-10T23:14:45.0596790+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) Creating DbCommand for '"ExecuteReader"'.
+2020-12-10T23:14:45.0601350+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) Created DbCommand for '"ExecuteReader"' (0ms).
+2020-12-10T23:14:45.0609117+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) Executing DbCommand [Parameters=["@__title_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [c].[ID], [c].[Description], [c].[Title]
+FROM [Categories] AS [c]
+WHERE [c].[Title] = @__title_0"
+2020-12-10T23:14:45.0657927+03:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("5"ms) [Parameters=["@__title_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [c].[ID], [c].[Description], [c].[Title]
+FROM [Categories] AS [c]
+WHERE [c].[Title] = @__title_0"
+2020-12-10T23:14:45.0687223+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) A data reader was disposed.
+2020-12-10T23:14:45.2183284+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) Creating DbCommand for '"ExecuteReader"'.
+2020-12-10T23:14:45.2189611+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) Created DbCommand for '"ExecuteReader"' (0ms).
+2020-12-10T23:14:45.2215939+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) Executing DbCommand [Parameters=["@p0='?' (DbType = Boolean), @p1='?' (Size = 450), @p2='?' (DbType = Int32), @p3='?' (Size = 4000), @p4='?' (DbType = DateTime2), @p5='?' (Size = 450), @p6='?' (DbType = Boolean), @p7='?' (Size = 4000), @p8='?' (DbType = DateTime2), @p9='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SET NOCOUNT ON;
+INSERT INTO [Posts] ([Approved], [ApproverId], [CategoryID], [Content], [Create], [CreatorId], [Published], [Title], [Update], [category_string])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9);
+SELECT [ID]
+FROM [Posts]
+WHERE @@ROWCOUNT = 1 AND [ID] = scope_identity();"
+2020-12-10T23:14:45.2276993+03:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("7"ms) [Parameters=["@p0='?' (DbType = Boolean), @p1='?' (Size = 450), @p2='?' (DbType = Int32), @p3='?' (Size = 4000), @p4='?' (DbType = DateTime2), @p5='?' (Size = 450), @p6='?' (DbType = Boolean), @p7='?' (Size = 4000), @p8='?' (DbType = DateTime2), @p9='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SET NOCOUNT ON;
+INSERT INTO [Posts] ([Approved], [ApproverId], [CategoryID], [Content], [Create], [CreatorId], [Published], [Title], [Update], [category_string])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9);
+SELECT [ID]
+FROM [Posts]
+WHERE @@ROWCOUNT = 1 AND [ID] = scope_identity();"
+2020-12-10T23:14:45.2621361+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) A data reader was disposed.
+2020-12-10T23:14:45.3176798+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) Creating DbCommand for '"ExecuteReader"'.
+2020-12-10T23:14:45.3183711+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) Created DbCommand for '"ExecuteReader"' (0ms).
+2020-12-10T23:14:45.3190608+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) Executing DbCommand [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [c].[ID], [c].[Description], [c].[Title]
+FROM [Categories] AS [c]"
+2020-12-10T23:14:45.3199461+03:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [c].[ID], [c].[Description], [c].[Title]
+FROM [Categories] AS [c]"
+2020-12-10T23:14:45.3208206+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) A data reader was disposed.
+2020-12-10T23:14:52.8777596+03:00 [INF] (Blog111.Controllers.BlogController) Post Created
+2020-12-10T23:14:52.8856990+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) Creating DbCommand for '"ExecuteReader"'.
+2020-12-10T23:14:52.8860285+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) Created DbCommand for '"ExecuteReader"' (0ms).
+2020-12-10T23:14:52.8866835+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) Executing DbCommand [Parameters=["@__p_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[Header], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[content]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[Id] = @__p_0"
+2020-12-10T23:14:52.8902837+03:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("4"ms) [Parameters=["@__p_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[Header], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[content]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[Id] = @__p_0"
+2020-12-10T23:14:52.8919095+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) A data reader was disposed.
+2020-12-10T23:20:26.8129462+03:00 [INF] (Microsoft.Hosting.Lifetime) Now listening on: "https://localhost:5001"
+2020-12-10T23:20:26.8838535+03:00 [INF] (Microsoft.Hosting.Lifetime) Now listening on: "http://localhost:5000"
+2020-12-10T23:20:26.8868812+03:00 [INF] (Microsoft.Hosting.Lifetime) Application started. Press Ctrl+C to shut down.
+2020-12-10T23:20:26.8871960+03:00 [INF] (Microsoft.Hosting.Lifetime) Hosting environment: "Development"
+2020-12-10T23:20:26.8874211+03:00 [INF] (Microsoft.Hosting.Lifetime) Content root path: "C:\Users\vladf\source\repos\Blog111"
+2020-12-10T23:20:28.9227303+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) Creating DbCommand for '"ExecuteReader"'.
+2020-12-10T23:20:28.9617667+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) Created DbCommand for '"ExecuteReader"' (38ms).
+2020-12-10T23:20:29.2199923+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) Executing DbCommand [Parameters=["@__search_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [p].[ID], [p].[Approved], [p].[ApproverId], [p].[CategoryID], [p].[Content], [p].[Create], [p].[CreatorId], [p].[Published], [p].[Title], [p].[Update], [p].[category_string], [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[Header], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[content], [c].[ID], [c].[Content], [c].[Create], [c].[ParentID], [c].[PostID], [c].[PosterId]
+FROM [Posts] AS [p]
+LEFT JOIN [AspNetUsers] AS [a] ON [p].[CreatorId] = [a].[Id]
+LEFT JOIN [Comments] AS [c] ON [p].[ID] = [c].[PostID]
+WHERE ((@__search_0 = N'') OR (CHARINDEX(@__search_0, [p].[Title]) > 0)) OR ((@__search_0 = N'') OR (CHARINDEX(@__search_0, [p].[Content]) > 0))
+ORDER BY [p].[Update] DESC, [p].[ID], [c].[ID]"
+2020-12-10T23:20:29.2867068+03:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("74"ms) [Parameters=["@__search_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [p].[ID], [p].[Approved], [p].[ApproverId], [p].[CategoryID], [p].[Content], [p].[Create], [p].[CreatorId], [p].[Published], [p].[Title], [p].[Update], [p].[category_string], [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[Header], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[content], [c].[ID], [c].[Content], [c].[Create], [c].[ParentID], [c].[PostID], [c].[PosterId]
+FROM [Posts] AS [p]
+LEFT JOIN [AspNetUsers] AS [a] ON [p].[CreatorId] = [a].[Id]
+LEFT JOIN [Comments] AS [c] ON [p].[ID] = [c].[PostID]
+WHERE ((@__search_0 = N'') OR (CHARINDEX(@__search_0, [p].[Title]) > 0)) OR ((@__search_0 = N'') OR (CHARINDEX(@__search_0, [p].[Content]) > 0))
+ORDER BY [p].[Update] DESC, [p].[ID], [c].[ID]"
+2020-12-10T23:20:29.4538834+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) A data reader was disposed.
+2020-12-10T23:20:29.4692056+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) Creating DbCommand for '"ExecuteReader"'.
+2020-12-10T23:20:29.4696770+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) Created DbCommand for '"ExecuteReader"' (0ms).
+2020-12-10T23:20:29.4712102+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) Executing DbCommand [Parameters=["@__search_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [p].[ID], [p].[Approved], [p].[ApproverId], [p].[CategoryID], [p].[Content], [p].[Create], [p].[CreatorId], [p].[Published], [p].[Title], [p].[Update], [p].[category_string], [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[Header], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[content], [c].[ID], [c].[Content], [c].[Create], [c].[ParentID], [c].[PostID], [c].[PosterId]
+FROM [Posts] AS [p]
+LEFT JOIN [AspNetUsers] AS [a] ON [p].[CreatorId] = [a].[Id]
+LEFT JOIN [Comments] AS [c] ON [p].[ID] = [c].[PostID]
+WHERE ((@__search_0 = N'') OR (CHARINDEX(@__search_0, [p].[Title]) > 0)) OR ((@__search_0 = N'') OR (CHARINDEX(@__search_0, [p].[Content]) > 0))
+ORDER BY [p].[Update] DESC, [p].[ID], [c].[ID]"
+2020-12-10T23:20:29.4763394+03:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("5"ms) [Parameters=["@__search_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [p].[ID], [p].[Approved], [p].[ApproverId], [p].[CategoryID], [p].[Content], [p].[Create], [p].[CreatorId], [p].[Published], [p].[Title], [p].[Update], [p].[category_string], [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[Header], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[content], [c].[ID], [c].[Content], [c].[Create], [c].[ParentID], [c].[PostID], [c].[PosterId]
+FROM [Posts] AS [p]
+LEFT JOIN [AspNetUsers] AS [a] ON [p].[CreatorId] = [a].[Id]
+LEFT JOIN [Comments] AS [c] ON [p].[ID] = [c].[PostID]
+WHERE ((@__search_0 = N'') OR (CHARINDEX(@__search_0, [p].[Title]) > 0)) OR ((@__search_0 = N'') OR (CHARINDEX(@__search_0, [p].[Content]) > 0))
+ORDER BY [p].[Update] DESC, [p].[ID], [c].[ID]"
+2020-12-10T23:20:29.4896932+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) A data reader was disposed.
+2020-12-10T23:23:50.6867925+03:00 [INF] (Microsoft.Hosting.Lifetime) Now listening on: "https://localhost:5001"
+2020-12-10T23:23:50.7533501+03:00 [INF] (Microsoft.Hosting.Lifetime) Now listening on: "http://localhost:5000"
+2020-12-10T23:23:50.7562197+03:00 [INF] (Microsoft.Hosting.Lifetime) Application started. Press Ctrl+C to shut down.
+2020-12-10T23:23:50.7564774+03:00 [INF] (Microsoft.Hosting.Lifetime) Hosting environment: "Development"
+2020-12-10T23:23:50.7566982+03:00 [INF] (Microsoft.Hosting.Lifetime) Content root path: "C:\Users\vladf\source\repos\Blog111"
+2020-12-10T23:23:52.7635893+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) Creating DbCommand for '"ExecuteReader"'.
+2020-12-10T23:23:52.8029881+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) Created DbCommand for '"ExecuteReader"' (40ms).
+2020-12-10T23:23:53.0791219+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) Executing DbCommand [Parameters=["@__search_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [p].[ID], [p].[Approved], [p].[ApproverId], [p].[CategoryID], [p].[Content], [p].[Create], [p].[CreatorId], [p].[Published], [p].[Title], [p].[Update], [p].[category_string], [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[Header], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[content], [c].[ID], [c].[Content], [c].[Create], [c].[ParentID], [c].[PostID], [c].[PosterId]
+FROM [Posts] AS [p]
+LEFT JOIN [AspNetUsers] AS [a] ON [p].[CreatorId] = [a].[Id]
+LEFT JOIN [Comments] AS [c] ON [p].[ID] = [c].[PostID]
+WHERE ((@__search_0 = N'') OR (CHARINDEX(@__search_0, [p].[Title]) > 0)) OR ((@__search_0 = N'') OR (CHARINDEX(@__search_0, [p].[Content]) > 0))
+ORDER BY [p].[Update] DESC, [p].[ID], [c].[ID]"
+2020-12-10T23:23:53.1421033+03:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("73"ms) [Parameters=["@__search_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [p].[ID], [p].[Approved], [p].[ApproverId], [p].[CategoryID], [p].[Content], [p].[Create], [p].[CreatorId], [p].[Published], [p].[Title], [p].[Update], [p].[category_string], [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[Header], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[content], [c].[ID], [c].[Content], [c].[Create], [c].[ParentID], [c].[PostID], [c].[PosterId]
+FROM [Posts] AS [p]
+LEFT JOIN [AspNetUsers] AS [a] ON [p].[CreatorId] = [a].[Id]
+LEFT JOIN [Comments] AS [c] ON [p].[ID] = [c].[PostID]
+WHERE ((@__search_0 = N'') OR (CHARINDEX(@__search_0, [p].[Title]) > 0)) OR ((@__search_0 = N'') OR (CHARINDEX(@__search_0, [p].[Content]) > 0))
+ORDER BY [p].[Update] DESC, [p].[ID], [c].[ID]"
+2020-12-10T23:23:53.3051339+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) A data reader was disposed.
+2020-12-10T23:23:53.3200213+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) Creating DbCommand for '"ExecuteReader"'.
+2020-12-10T23:23:53.3208450+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) Created DbCommand for '"ExecuteReader"' (0ms).
+2020-12-10T23:23:53.3237788+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) Executing DbCommand [Parameters=["@__search_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [p].[ID], [p].[Approved], [p].[ApproverId], [p].[CategoryID], [p].[Content], [p].[Create], [p].[CreatorId], [p].[Published], [p].[Title], [p].[Update], [p].[category_string], [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[Header], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[content], [c].[ID], [c].[Content], [c].[Create], [c].[ParentID], [c].[PostID], [c].[PosterId]
+FROM [Posts] AS [p]
+LEFT JOIN [AspNetUsers] AS [a] ON [p].[CreatorId] = [a].[Id]
+LEFT JOIN [Comments] AS [c] ON [p].[ID] = [c].[PostID]
+WHERE ((@__search_0 = N'') OR (CHARINDEX(@__search_0, [p].[Title]) > 0)) OR ((@__search_0 = N'') OR (CHARINDEX(@__search_0, [p].[Content]) > 0))
+ORDER BY [p].[Update] DESC, [p].[ID], [c].[ID]"
+2020-12-10T23:23:53.3303951+03:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("7"ms) [Parameters=["@__search_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [p].[ID], [p].[Approved], [p].[ApproverId], [p].[CategoryID], [p].[Content], [p].[Create], [p].[CreatorId], [p].[Published], [p].[Title], [p].[Update], [p].[category_string], [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[Header], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[content], [c].[ID], [c].[Content], [c].[Create], [c].[ParentID], [c].[PostID], [c].[PosterId]
+FROM [Posts] AS [p]
+LEFT JOIN [AspNetUsers] AS [a] ON [p].[CreatorId] = [a].[Id]
+LEFT JOIN [Comments] AS [c] ON [p].[ID] = [c].[PostID]
+WHERE ((@__search_0 = N'') OR (CHARINDEX(@__search_0, [p].[Title]) > 0)) OR ((@__search_0 = N'') OR (CHARINDEX(@__search_0, [p].[Content]) > 0))
+ORDER BY [p].[Update] DESC, [p].[ID], [c].[ID]"
+2020-12-10T23:23:53.3342254+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) A data reader was disposed.
+2020-12-10T23:43:20.4345507+03:00 [INF] (Microsoft.Hosting.Lifetime) Now listening on: "https://localhost:5001"
+2020-12-10T23:43:20.5157852+03:00 [INF] (Microsoft.Hosting.Lifetime) Now listening on: "http://localhost:5000"
+2020-12-10T23:43:20.5189475+03:00 [INF] (Microsoft.Hosting.Lifetime) Application started. Press Ctrl+C to shut down.
+2020-12-10T23:43:20.5192545+03:00 [INF] (Microsoft.Hosting.Lifetime) Hosting environment: "Development"
+2020-12-10T23:43:20.5194616+03:00 [INF] (Microsoft.Hosting.Lifetime) Content root path: "C:\Users\vladf\source\repos\Blog111"
+2020-12-10T23:43:22.7010725+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) Creating DbCommand for '"ExecuteReader"'.
+2020-12-10T23:43:22.7469518+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) Created DbCommand for '"ExecuteReader"' (45ms).
+2020-12-10T23:43:23.0635105+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) Executing DbCommand [Parameters=["@__p_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[Header], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[content]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[Id] = @__p_0"
+2020-12-10T23:43:23.1424687+03:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("82"ms) [Parameters=["@__p_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[Header], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[content]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[Id] = @__p_0"
+2020-12-10T23:43:23.2498198+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) A data reader was disposed.
+2020-12-10T23:43:23.3174667+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) Creating DbCommand for '"ExecuteReader"'.
+2020-12-10T23:43:23.3182150+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) Created DbCommand for '"ExecuteReader"' (0ms).
+2020-12-10T23:43:23.3194418+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) Executing DbCommand [Parameters=["@__user_Id_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @__user_Id_0"
+2020-12-10T23:43:23.3247328+03:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("5"ms) [Parameters=["@__user_Id_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @__user_Id_0"
+2020-12-10T23:43:23.3285252+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) A data reader was disposed.
+2020-12-10T23:43:23.3704604+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) Creating DbCommand for '"ExecuteReader"'.
+2020-12-10T23:43:23.3712752+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) Created DbCommand for '"ExecuteReader"' (0ms).
+2020-12-10T23:43:23.3749295+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) Executing DbCommand [Parameters=["@__userId_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0"
+2020-12-10T23:43:23.3792881+03:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("4"ms) [Parameters=["@__userId_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0"
+2020-12-10T23:43:23.3807550+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) A data reader was disposed.
+2020-12-10T23:43:23.4451870+03:00 [INF] (Blog111.Controllers.HomeController) HomeController: Index OK
+2020-12-10T23:43:23.4691408+03:00 [INF] (Blog111.BusinessManager.PostBusinessManager) PostBusinessManager: GetIndexViewModel model OK.
+2020-12-10T23:43:23.5392492+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) Creating DbCommand for '"ExecuteReader"'.
+2020-12-10T23:43:23.5399710+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) Created DbCommand for '"ExecuteReader"' (0ms).
+2020-12-10T23:43:23.5433836+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) Executing DbCommand [Parameters=["@__search_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [p].[ID], [p].[Approved], [p].[ApproverId], [p].[CategoryID], [p].[Content], [p].[Create], [p].[CreatorId], [p].[Published], [p].[Title], [p].[Update], [p].[category_string], [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[Header], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[content], [c].[ID], [c].[Content], [c].[Create], [c].[ParentID], [c].[PostID], [c].[PosterId]
+FROM [Posts] AS [p]
+LEFT JOIN [AspNetUsers] AS [a] ON [p].[CreatorId] = [a].[Id]
+LEFT JOIN [Comments] AS [c] ON [p].[ID] = [c].[PostID]
+WHERE ((@__search_0 = N'') OR (CHARINDEX(@__search_0, [p].[Title]) > 0)) OR ((@__search_0 = N'') OR (CHARINDEX(@__search_0, [p].[Content]) > 0))
+ORDER BY [p].[Update] DESC, [p].[ID], [c].[ID]"
+2020-12-10T23:43:23.5542041+03:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("11"ms) [Parameters=["@__search_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [p].[ID], [p].[Approved], [p].[ApproverId], [p].[CategoryID], [p].[Content], [p].[Create], [p].[CreatorId], [p].[Published], [p].[Title], [p].[Update], [p].[category_string], [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[Header], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[content], [c].[ID], [c].[Content], [c].[Create], [c].[ParentID], [c].[PostID], [c].[PosterId]
+FROM [Posts] AS [p]
+LEFT JOIN [AspNetUsers] AS [a] ON [p].[CreatorId] = [a].[Id]
+LEFT JOIN [Comments] AS [c] ON [p].[ID] = [c].[PostID]
+WHERE ((@__search_0 = N'') OR (CHARINDEX(@__search_0, [p].[Title]) > 0)) OR ((@__search_0 = N'') OR (CHARINDEX(@__search_0, [p].[Content]) > 0))
+ORDER BY [p].[Update] DESC, [p].[ID], [c].[ID]"
+2020-12-10T23:43:23.6340732+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) A data reader was disposed.
+2020-12-10T23:43:23.6410416+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) Creating DbCommand for '"ExecuteReader"'.
+2020-12-10T23:43:23.6414590+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) Created DbCommand for '"ExecuteReader"' (0ms).
+2020-12-10T23:43:23.6421636+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) Executing DbCommand [Parameters=["@__search_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [p].[ID], [p].[Approved], [p].[ApproverId], [p].[CategoryID], [p].[Content], [p].[Create], [p].[CreatorId], [p].[Published], [p].[Title], [p].[Update], [p].[category_string], [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[Header], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[content], [c].[ID], [c].[Content], [c].[Create], [c].[ParentID], [c].[PostID], [c].[PosterId]
+FROM [Posts] AS [p]
+LEFT JOIN [AspNetUsers] AS [a] ON [p].[CreatorId] = [a].[Id]
+LEFT JOIN [Comments] AS [c] ON [p].[ID] = [c].[PostID]
+WHERE ((@__search_0 = N'') OR (CHARINDEX(@__search_0, [p].[Title]) > 0)) OR ((@__search_0 = N'') OR (CHARINDEX(@__search_0, [p].[Content]) > 0))
+ORDER BY [p].[Update] DESC, [p].[ID], [c].[ID]"
+2020-12-10T23:43:23.6458206+03:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("4"ms) [Parameters=["@__search_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [p].[ID], [p].[Approved], [p].[ApproverId], [p].[CategoryID], [p].[Content], [p].[Create], [p].[CreatorId], [p].[Published], [p].[Title], [p].[Update], [p].[category_string], [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[Header], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[content], [c].[ID], [c].[Content], [c].[Create], [c].[ParentID], [c].[PostID], [c].[PosterId]
+FROM [Posts] AS [p]
+LEFT JOIN [AspNetUsers] AS [a] ON [p].[CreatorId] = [a].[Id]
+LEFT JOIN [Comments] AS [c] ON [p].[ID] = [c].[PostID]
+WHERE ((@__search_0 = N'') OR (CHARINDEX(@__search_0, [p].[Title]) > 0)) OR ((@__search_0 = N'') OR (CHARINDEX(@__search_0, [p].[Content]) > 0))
+ORDER BY [p].[Update] DESC, [p].[ID], [c].[ID]"
+2020-12-10T23:43:23.6504867+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) A data reader was disposed.
+2020-12-10T23:43:26.7100805+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) Creating DbCommand for '"ExecuteReader"'.
+2020-12-10T23:43:26.7113975+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) Created DbCommand for '"ExecuteReader"' (1ms).
+2020-12-10T23:43:26.7134840+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) Executing DbCommand [Parameters=["@__PostID_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [t].[ID], [t].[Approved], [t].[ApproverId], [t].[CategoryID], [t].[Content], [t].[Create], [t].[CreatorId], [t].[Published], [t].[Title], [t].[Update], [t].[category_string], [t].[Id0], [t].[AccessFailedCount], [t].[ConcurrencyStamp], [t].[Email], [t].[EmailConfirmed], [t].[FirstName], [t].[Header], [t].[LastName], [t].[LockoutEnabled], [t].[LockoutEnd], [t].[NormalizedEmail], [t].[NormalizedUserName], [t].[PasswordHash], [t].[PhoneNumber], [t].[PhoneNumberConfirmed], [t].[SecurityStamp], [t].[TwoFactorEnabled], [t].[UserName], [t].[content0], [t1].[ID], [t1].[Content], [t1].[Create], [t1].[ParentID], [t1].[PostID], [t1].[PosterId], [t1].[Id0], [t1].[AccessFailedCount], [t1].[ConcurrencyStamp], [t1].[Email], [t1].[EmailConfirmed], [t1].[FirstName], [t1].[Header], [t1].[LastName], [t1].[LockoutEnabled], [t1].[LockoutEnd], [t1].[NormalizedEmail], [t1].[NormalizedUserName], [t1].[PasswordHash], [t1].[PhoneNumber], [t1].[PhoneNumberConfirmed], [t1].[SecurityStamp], [t1].[TwoFactorEnabled], [t1].[UserName], [t1].[content0], [t1].[ID1], [t1].[Content1], [t1].[Create0], [t1].[ParentID0], [t1].[PostID0], [t1].[PosterId0], [t1].[ID00], [t1].[Content00], [t1].[Create00], [t1].[ParentID00], [t1].[PostID00], [t1].[PosterId00]
+FROM (
+    SELECT TOP(1) [p].[ID], [p].[Approved], [p].[ApproverId], [p].[CategoryID], [p].[Content], [p].[Create], [p].[CreatorId], [p].[Published], [p].[Title], [p].[Update], [p].[category_string], [a].[Id] AS [Id0], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[Header], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[content] AS [content0]
+    FROM [Posts] AS [p]
+    LEFT JOIN [AspNetUsers] AS [a] ON [p].[CreatorId] = [a].[Id]
+    WHERE [p].[ID] = @__PostID_0
+) AS [t]
+LEFT JOIN (
+    SELECT [c].[ID], [c].[Content], [c].[Create], [c].[ParentID], [c].[PostID], [c].[PosterId], [a0].[Id] AS [Id0], [a0].[AccessFailedCount], [a0].[ConcurrencyStamp], [a0].[Email], [a0].[EmailConfirmed], [a0].[FirstName], [a0].[Header], [a0].[LastName], [a0].[LockoutEnabled], [a0].[LockoutEnd], [a0].[NormalizedEmail], [a0].[NormalizedUserName], [a0].[PasswordHash], [a0].[PhoneNumber], [a0].[PhoneNumberConfirmed], [a0].[SecurityStamp], [a0].[TwoFactorEnabled], [a0].[UserName], [a0].[content] AS [content0], [t0].[ID] AS [ID1], [t0].[Content] AS [Content1], [t0].[Create] AS [Create0], [t0].[ParentID] AS [ParentID0], [t0].[PostID] AS [PostID0], [t0].[PosterId] AS [PosterId0], [t0].[ID0] AS [ID00], [t0].[Content0] AS [Content00], [t0].[Create0] AS [Create00], [t0].[ParentID0] AS [ParentID00], [t0].[PostID0] AS [PostID00], [t0].[PosterId0] AS [PosterId00]
+    FROM [Comments] AS [c]
+    LEFT JOIN [AspNetUsers] AS [a0] ON [c].[PosterId] = [a0].[Id]
+    LEFT JOIN (
+        SELECT [c0].[ID], [c0].[Content], [c0].[Create], [c0].[ParentID], [c0].[PostID], [c0].[PosterId], [c1].[ID] AS [ID0], [c1].[Content] AS [Content0], [c1].[Create] AS [Create0], [c1].[ParentID] AS [ParentID0], [c1].[PostID] AS [PostID0], [c1].[PosterId] AS [PosterId0]
+        FROM [Comments] AS [c0]
+        LEFT JOIN [Comments] AS [c1] ON [c0].[ParentID] = [c1].[ID]
+    ) AS [t0] ON [c].[ID] = [t0].[ParentID]
+) AS [t1] ON [t].[ID] = [t1].[PostID]
+ORDER BY [t].[ID], [t1].[ID], [t1].[ID1]"
+2020-12-10T23:43:26.7314875+03:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("19"ms) [Parameters=["@__PostID_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [t].[ID], [t].[Approved], [t].[ApproverId], [t].[CategoryID], [t].[Content], [t].[Create], [t].[CreatorId], [t].[Published], [t].[Title], [t].[Update], [t].[category_string], [t].[Id0], [t].[AccessFailedCount], [t].[ConcurrencyStamp], [t].[Email], [t].[EmailConfirmed], [t].[FirstName], [t].[Header], [t].[LastName], [t].[LockoutEnabled], [t].[LockoutEnd], [t].[NormalizedEmail], [t].[NormalizedUserName], [t].[PasswordHash], [t].[PhoneNumber], [t].[PhoneNumberConfirmed], [t].[SecurityStamp], [t].[TwoFactorEnabled], [t].[UserName], [t].[content0], [t1].[ID], [t1].[Content], [t1].[Create], [t1].[ParentID], [t1].[PostID], [t1].[PosterId], [t1].[Id0], [t1].[AccessFailedCount], [t1].[ConcurrencyStamp], [t1].[Email], [t1].[EmailConfirmed], [t1].[FirstName], [t1].[Header], [t1].[LastName], [t1].[LockoutEnabled], [t1].[LockoutEnd], [t1].[NormalizedEmail], [t1].[NormalizedUserName], [t1].[PasswordHash], [t1].[PhoneNumber], [t1].[PhoneNumberConfirmed], [t1].[SecurityStamp], [t1].[TwoFactorEnabled], [t1].[UserName], [t1].[content0], [t1].[ID1], [t1].[Content1], [t1].[Create0], [t1].[ParentID0], [t1].[PostID0], [t1].[PosterId0], [t1].[ID00], [t1].[Content00], [t1].[Create00], [t1].[ParentID00], [t1].[PostID00], [t1].[PosterId00]
+FROM (
+    SELECT TOP(1) [p].[ID], [p].[Approved], [p].[ApproverId], [p].[CategoryID], [p].[Content], [p].[Create], [p].[CreatorId], [p].[Published], [p].[Title], [p].[Update], [p].[category_string], [a].[Id] AS [Id0], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[Header], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[content] AS [content0]
+    FROM [Posts] AS [p]
+    LEFT JOIN [AspNetUsers] AS [a] ON [p].[CreatorId] = [a].[Id]
+    WHERE [p].[ID] = @__PostID_0
+) AS [t]
+LEFT JOIN (
+    SELECT [c].[ID], [c].[Content], [c].[Create], [c].[ParentID], [c].[PostID], [c].[PosterId], [a0].[Id] AS [Id0], [a0].[AccessFailedCount], [a0].[ConcurrencyStamp], [a0].[Email], [a0].[EmailConfirmed], [a0].[FirstName], [a0].[Header], [a0].[LastName], [a0].[LockoutEnabled], [a0].[LockoutEnd], [a0].[NormalizedEmail], [a0].[NormalizedUserName], [a0].[PasswordHash], [a0].[PhoneNumber], [a0].[PhoneNumberConfirmed], [a0].[SecurityStamp], [a0].[TwoFactorEnabled], [a0].[UserName], [a0].[content] AS [content0], [t0].[ID] AS [ID1], [t0].[Content] AS [Content1], [t0].[Create] AS [Create0], [t0].[ParentID] AS [ParentID0], [t0].[PostID] AS [PostID0], [t0].[PosterId] AS [PosterId0], [t0].[ID0] AS [ID00], [t0].[Content0] AS [Content00], [t0].[Create0] AS [Create00], [t0].[ParentID0] AS [ParentID00], [t0].[PostID0] AS [PostID00], [t0].[PosterId0] AS [PosterId00]
+    FROM [Comments] AS [c]
+    LEFT JOIN [AspNetUsers] AS [a0] ON [c].[PosterId] = [a0].[Id]
+    LEFT JOIN (
+        SELECT [c0].[ID], [c0].[Content], [c0].[Create], [c0].[ParentID], [c0].[PostID], [c0].[PosterId], [c1].[ID] AS [ID0], [c1].[Content] AS [Content0], [c1].[Create] AS [Create0], [c1].[ParentID] AS [ParentID0], [c1].[PostID] AS [PostID0], [c1].[PosterId] AS [PosterId0]
+        FROM [Comments] AS [c0]
+        LEFT JOIN [Comments] AS [c1] ON [c0].[ParentID] = [c1].[ID]
+    ) AS [t0] ON [c].[ID] = [t0].[ParentID]
+) AS [t1] ON [t].[ID] = [t1].[PostID]
+ORDER BY [t].[ID], [t1].[ID], [t1].[ID1]"
+2020-12-10T23:43:26.7384666+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) A data reader was disposed.
+2020-12-10T23:43:26.7392151+03:00 [INF] (Blog111.BusinessManager.PostBusinessManager) PostBusinessManager: GetPostViewModel  OK.
+2020-12-10T23:43:29.4798107+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) Creating DbCommand for '"ExecuteReader"'.
+2020-12-10T23:43:29.4817480+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) Created DbCommand for '"ExecuteReader"' (1ms).
+2020-12-10T23:43:29.4852692+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) Executing DbCommand [Parameters=["@__POSTID_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [p].[ID], [p].[Approved], [p].[ApproverId], [p].[CategoryID], [p].[Content], [p].[Create], [p].[CreatorId], [p].[Published], [p].[Title], [p].[Update], [p].[category_string]
+FROM [Posts] AS [p]
+WHERE [p].[ID] = @__POSTID_0"
+2020-12-10T23:43:29.4883403+03:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("3"ms) [Parameters=["@__POSTID_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [p].[ID], [p].[Approved], [p].[ApproverId], [p].[CategoryID], [p].[Content], [p].[Create], [p].[CreatorId], [p].[Published], [p].[Title], [p].[Update], [p].[category_string]
+FROM [Posts] AS [p]
+WHERE [p].[ID] = @__POSTID_0"
+2020-12-10T23:43:29.4910786+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) A data reader was disposed.
+2020-12-10T23:43:29.4990566+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) Creating DbCommand for '"ExecuteReader"'.
+2020-12-10T23:43:29.4996124+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) Created DbCommand for '"ExecuteReader"' (0ms).
+2020-12-10T23:43:29.5004418+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) Executing DbCommand [Parameters=["@__first_0='?' (Size = 4000), @__second_1='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[Header], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[content]
+FROM [AspNetUsers] AS [a]
+WHERE ([a].[FirstName] = @__first_0) AND ([a].[LastName] = @__second_1)"
+2020-12-10T23:43:29.5039840+03:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("3"ms) [Parameters=["@__first_0='?' (Size = 4000), @__second_1='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[Header], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[content]
+FROM [AspNetUsers] AS [a]
+WHERE ([a].[FirstName] = @__first_0) AND ([a].[LastName] = @__second_1)"
+2020-12-10T23:43:29.5072253+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) A data reader was disposed.
+2020-12-10T23:43:29.6592183+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) Creating DbCommand for '"ExecuteReader"'.
+2020-12-10T23:43:29.6598720+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) Created DbCommand for '"ExecuteReader"' (0ms).
+2020-12-10T23:43:29.6615039+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) Executing DbCommand [Parameters=["@p0='?' (Size = 4000), @p1='?' (DbType = DateTime2), @p2='?' (DbType = Int32), @p3='?' (DbType = Int32), @p4='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SET NOCOUNT ON;
+INSERT INTO [Comments] ([Content], [Create], [ParentID], [PostID], [PosterId])
+VALUES (@p0, @p1, @p2, @p3, @p4);
+SELECT [ID]
+FROM [Comments]
+WHERE @@ROWCOUNT = 1 AND [ID] = scope_identity();"
+2020-12-10T23:43:29.6673963+03:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("6"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?' (DbType = DateTime2), @p2='?' (DbType = Int32), @p3='?' (DbType = Int32), @p4='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SET NOCOUNT ON;
+INSERT INTO [Comments] ([Content], [Create], [ParentID], [PostID], [PosterId])
+VALUES (@p0, @p1, @p2, @p3, @p4);
+SELECT [ID]
+FROM [Comments]
+WHERE @@ROWCOUNT = 1 AND [ID] = scope_identity();"
+2020-12-10T23:43:29.6974211+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) A data reader was disposed.
+2020-12-10T23:50:30.8259153+03:00 [INF] (Blog111.Controllers.AdminController) AdminController: Index OK 
+2020-12-10T23:50:30.8327932+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) Creating DbCommand for '"ExecuteReader"'.
+2020-12-10T23:50:30.8341228+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) Created DbCommand for '"ExecuteReader"' (1ms).
+2020-12-10T23:50:30.8579179+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) Executing DbCommand [Parameters=["@__p_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[Header], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[content]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[Id] = @__p_0"
+2020-12-10T23:50:30.8627837+03:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("5"ms) [Parameters=["@__p_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[Header], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[content]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[Id] = @__p_0"
+2020-12-10T23:50:30.8663495+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) A data reader was disposed.
+2020-12-10T23:50:30.8676465+03:00 [INF] (Blog111.BusinessManager.Interfaces.AdminBusinessManager) AdminBusinessManager: GetAdminDashboard OK
+2020-12-10T23:50:30.9215967+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) Creating DbCommand for '"ExecuteReader"'.
+2020-12-10T23:50:30.9223814+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) Created DbCommand for '"ExecuteReader"' (0ms).
+2020-12-10T23:50:30.9234257+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) Executing DbCommand [Parameters=["@__entity_equality_user_0_Id='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [p].[ID], [p].[Approved], [p].[ApproverId], [p].[CategoryID], [p].[Content], [p].[Create], [p].[CreatorId], [p].[Published], [p].[Title], [p].[Update], [p].[category_string], [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[Header], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[content], [a0].[Id], [a0].[AccessFailedCount], [a0].[ConcurrencyStamp], [a0].[Email], [a0].[EmailConfirmed], [a0].[FirstName], [a0].[Header], [a0].[LastName], [a0].[LockoutEnabled], [a0].[LockoutEnd], [a0].[NormalizedEmail], [a0].[NormalizedUserName], [a0].[PasswordHash], [a0].[PhoneNumber], [a0].[PhoneNumberConfirmed], [a0].[SecurityStamp], [a0].[TwoFactorEnabled], [a0].[UserName], [a0].[content], [c].[ID], [c].[Content], [c].[Create], [c].[ParentID], [c].[PostID], [c].[PosterId]
+FROM [Posts] AS [p]
+LEFT JOIN [AspNetUsers] AS [a] ON [p].[CreatorId] = [a].[Id]
+LEFT JOIN [AspNetUsers] AS [a0] ON [p].[ApproverId] = [a0].[Id]
+LEFT JOIN [Comments] AS [c] ON [p].[ID] = [c].[PostID]
+WHERE [a].[Id] = @__entity_equality_user_0_Id
+ORDER BY [p].[ID], [c].[ID]"
+2020-12-10T23:50:30.9309046+03:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("7"ms) [Parameters=["@__entity_equality_user_0_Id='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [p].[ID], [p].[Approved], [p].[ApproverId], [p].[CategoryID], [p].[Content], [p].[Create], [p].[CreatorId], [p].[Published], [p].[Title], [p].[Update], [p].[category_string], [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[Header], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[content], [a0].[Id], [a0].[AccessFailedCount], [a0].[ConcurrencyStamp], [a0].[Email], [a0].[EmailConfirmed], [a0].[FirstName], [a0].[Header], [a0].[LastName], [a0].[LockoutEnabled], [a0].[LockoutEnd], [a0].[NormalizedEmail], [a0].[NormalizedUserName], [a0].[PasswordHash], [a0].[PhoneNumber], [a0].[PhoneNumberConfirmed], [a0].[SecurityStamp], [a0].[TwoFactorEnabled], [a0].[UserName], [a0].[content], [c].[ID], [c].[Content], [c].[Create], [c].[ParentID], [c].[PostID], [c].[PosterId]
+FROM [Posts] AS [p]
+LEFT JOIN [AspNetUsers] AS [a] ON [p].[CreatorId] = [a].[Id]
+LEFT JOIN [AspNetUsers] AS [a0] ON [p].[ApproverId] = [a0].[Id]
+LEFT JOIN [Comments] AS [c] ON [p].[ID] = [c].[PostID]
+WHERE [a].[Id] = @__entity_equality_user_0_Id
+ORDER BY [p].[ID], [c].[ID]"
+2020-12-10T23:50:30.9403928+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) A data reader was disposed.
+2020-12-10T23:50:32.8350880+03:00 [INF] (Blog111.Controllers.AdminController) AdminController: About OK 
+2020-12-10T23:50:32.8407831+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) Creating DbCommand for '"ExecuteReader"'.
+2020-12-10T23:50:32.8419412+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) Created DbCommand for '"ExecuteReader"' (1ms).
+2020-12-10T23:50:32.8440118+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) Executing DbCommand [Parameters=["@__p_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[Header], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[content]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[Id] = @__p_0"
+2020-12-10T23:50:32.8576239+03:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("9"ms) [Parameters=["@__p_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[Header], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[content]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[Id] = @__p_0"
+2020-12-10T23:50:32.8645419+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) A data reader was disposed.
+2020-12-10T23:50:32.8655500+03:00 [INF] (Blog111.BusinessManager.Interfaces.AdminBusinessManager) AdminBusinessManager: GetAboutViewModel OK
+2020-12-10T23:50:36.3007496+03:00 [INF] (Blog111.Controllers.AdminController) AdminController: Index OK 
+2020-12-10T23:50:36.3036001+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) Creating DbCommand for '"ExecuteReader"'.
+2020-12-10T23:50:36.3042229+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) Created DbCommand for '"ExecuteReader"' (0ms).
+2020-12-10T23:50:36.3058258+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) Executing DbCommand [Parameters=["@__p_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[Header], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[content]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[Id] = @__p_0"
+2020-12-10T23:50:36.3101242+03:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("4"ms) [Parameters=["@__p_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[Header], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[content]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[Id] = @__p_0"
+2020-12-10T23:50:36.3129420+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) A data reader was disposed.
+2020-12-10T23:50:36.3132982+03:00 [INF] (Blog111.BusinessManager.Interfaces.AdminBusinessManager) AdminBusinessManager: GetAdminDashboard OK
+2020-12-10T23:50:36.3151238+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) Creating DbCommand for '"ExecuteReader"'.
+2020-12-10T23:50:36.3156385+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) Created DbCommand for '"ExecuteReader"' (0ms).
+2020-12-10T23:50:36.3164649+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) Executing DbCommand [Parameters=["@__entity_equality_user_0_Id='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [p].[ID], [p].[Approved], [p].[ApproverId], [p].[CategoryID], [p].[Content], [p].[Create], [p].[CreatorId], [p].[Published], [p].[Title], [p].[Update], [p].[category_string], [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[Header], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[content], [a0].[Id], [a0].[AccessFailedCount], [a0].[ConcurrencyStamp], [a0].[Email], [a0].[EmailConfirmed], [a0].[FirstName], [a0].[Header], [a0].[LastName], [a0].[LockoutEnabled], [a0].[LockoutEnd], [a0].[NormalizedEmail], [a0].[NormalizedUserName], [a0].[PasswordHash], [a0].[PhoneNumber], [a0].[PhoneNumberConfirmed], [a0].[SecurityStamp], [a0].[TwoFactorEnabled], [a0].[UserName], [a0].[content], [c].[ID], [c].[Content], [c].[Create], [c].[ParentID], [c].[PostID], [c].[PosterId]
+FROM [Posts] AS [p]
+LEFT JOIN [AspNetUsers] AS [a] ON [p].[CreatorId] = [a].[Id]
+LEFT JOIN [AspNetUsers] AS [a0] ON [p].[ApproverId] = [a0].[Id]
+LEFT JOIN [Comments] AS [c] ON [p].[ID] = [c].[PostID]
+WHERE [a].[Id] = @__entity_equality_user_0_Id
+ORDER BY [p].[ID], [c].[ID]"
+2020-12-10T23:50:36.3210002+03:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("4"ms) [Parameters=["@__entity_equality_user_0_Id='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [p].[ID], [p].[Approved], [p].[ApproverId], [p].[CategoryID], [p].[Content], [p].[Create], [p].[CreatorId], [p].[Published], [p].[Title], [p].[Update], [p].[category_string], [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[Header], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[content], [a0].[Id], [a0].[AccessFailedCount], [a0].[ConcurrencyStamp], [a0].[Email], [a0].[EmailConfirmed], [a0].[FirstName], [a0].[Header], [a0].[LastName], [a0].[LockoutEnabled], [a0].[LockoutEnd], [a0].[NormalizedEmail], [a0].[NormalizedUserName], [a0].[PasswordHash], [a0].[PhoneNumber], [a0].[PhoneNumberConfirmed], [a0].[SecurityStamp], [a0].[TwoFactorEnabled], [a0].[UserName], [a0].[content], [c].[ID], [c].[Content], [c].[Create], [c].[ParentID], [c].[PostID], [c].[PosterId]
+FROM [Posts] AS [p]
+LEFT JOIN [AspNetUsers] AS [a] ON [p].[CreatorId] = [a].[Id]
+LEFT JOIN [AspNetUsers] AS [a0] ON [p].[ApproverId] = [a0].[Id]
+LEFT JOIN [Comments] AS [c] ON [p].[ID] = [c].[PostID]
+WHERE [a].[Id] = @__entity_equality_user_0_Id
+ORDER BY [p].[ID], [c].[ID]"
+2020-12-10T23:50:36.3269582+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) A data reader was disposed.
+2020-12-10T23:50:37.2295131+03:00 [INF] (Serilog.AspNetCore.RequestLoggingMiddleware) HTTP "GET" "/Post/Index/1" responded 404 in 0.7569 ms
+2020-12-10T23:51:54.3602646+03:00 [INF] (Microsoft.Hosting.Lifetime) Now listening on: "https://localhost:5001"
+2020-12-10T23:51:54.4205082+03:00 [INF] (Microsoft.Hosting.Lifetime) Now listening on: "http://localhost:5000"
+2020-12-10T23:51:54.4249352+03:00 [INF] (Microsoft.Hosting.Lifetime) Application started. Press Ctrl+C to shut down.
+2020-12-10T23:51:54.4252635+03:00 [INF] (Microsoft.Hosting.Lifetime) Hosting environment: "Development"
+2020-12-10T23:51:54.4254866+03:00 [INF] (Microsoft.Hosting.Lifetime) Content root path: "C:\Users\vladf\source\repos\Blog111"
+2020-12-10T23:51:55.6855627+03:00 [INF] (Blog111.Controllers.HomeController) HomeController: Index OK
+2020-12-10T23:51:56.4346167+03:00 [INF] (Blog111.BusinessManager.PostBusinessManager) PostBusinessManager: GetIndexViewModel model OK.
+2020-12-10T23:51:56.7477981+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) Creating DbCommand for '"ExecuteReader"'.
+2020-12-10T23:51:56.9529652+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) Created DbCommand for '"ExecuteReader"' (204ms).
+2020-12-10T23:51:57.2895123+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) Executing DbCommand [Parameters=["@__search_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [p].[ID], [p].[Approved], [p].[ApproverId], [p].[CategoryID], [p].[Content], [p].[Create], [p].[CreatorId], [p].[Published], [p].[Title], [p].[Update], [p].[category_string], [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[Header], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[content], [c].[ID], [c].[Content], [c].[Create], [c].[ParentID], [c].[PostID], [c].[PosterId]
+FROM [Posts] AS [p]
+LEFT JOIN [AspNetUsers] AS [a] ON [p].[CreatorId] = [a].[Id]
+LEFT JOIN [Comments] AS [c] ON [p].[ID] = [c].[PostID]
+WHERE ((@__search_0 = N'') OR (CHARINDEX(@__search_0, [p].[Title]) > 0)) OR ((@__search_0 = N'') OR (CHARINDEX(@__search_0, [p].[Content]) > 0))
+ORDER BY [p].[Update] DESC, [p].[ID], [c].[ID]"
+2020-12-10T23:51:57.3548404+03:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("73"ms) [Parameters=["@__search_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [p].[ID], [p].[Approved], [p].[ApproverId], [p].[CategoryID], [p].[Content], [p].[Create], [p].[CreatorId], [p].[Published], [p].[Title], [p].[Update], [p].[category_string], [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[Header], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[content], [c].[ID], [c].[Content], [c].[Create], [c].[ParentID], [c].[PostID], [c].[PosterId]
+FROM [Posts] AS [p]
+LEFT JOIN [AspNetUsers] AS [a] ON [p].[CreatorId] = [a].[Id]
+LEFT JOIN [Comments] AS [c] ON [p].[ID] = [c].[PostID]
+WHERE ((@__search_0 = N'') OR (CHARINDEX(@__search_0, [p].[Title]) > 0)) OR ((@__search_0 = N'') OR (CHARINDEX(@__search_0, [p].[Content]) > 0))
+ORDER BY [p].[Update] DESC, [p].[ID], [c].[ID]"
+2020-12-10T23:51:57.5059443+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) A data reader was disposed.
+2020-12-10T23:51:57.5206179+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) Creating DbCommand for '"ExecuteReader"'.
+2020-12-10T23:51:57.5210877+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) Created DbCommand for '"ExecuteReader"' (0ms).
+2020-12-10T23:51:57.5232558+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) Executing DbCommand [Parameters=["@__search_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [p].[ID], [p].[Approved], [p].[ApproverId], [p].[CategoryID], [p].[Content], [p].[Create], [p].[CreatorId], [p].[Published], [p].[Title], [p].[Update], [p].[category_string], [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[Header], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[content], [c].[ID], [c].[Content], [c].[Create], [c].[ParentID], [c].[PostID], [c].[PosterId]
+FROM [Posts] AS [p]
+LEFT JOIN [AspNetUsers] AS [a] ON [p].[CreatorId] = [a].[Id]
+LEFT JOIN [Comments] AS [c] ON [p].[ID] = [c].[PostID]
+WHERE ((@__search_0 = N'') OR (CHARINDEX(@__search_0, [p].[Title]) > 0)) OR ((@__search_0 = N'') OR (CHARINDEX(@__search_0, [p].[Content]) > 0))
+ORDER BY [p].[Update] DESC, [p].[ID], [c].[ID]"
+2020-12-10T23:51:57.5317216+03:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("8"ms) [Parameters=["@__search_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [p].[ID], [p].[Approved], [p].[ApproverId], [p].[CategoryID], [p].[Content], [p].[Create], [p].[CreatorId], [p].[Published], [p].[Title], [p].[Update], [p].[category_string], [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[Header], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[content], [c].[ID], [c].[Content], [c].[Create], [c].[ParentID], [c].[PostID], [c].[PosterId]
+FROM [Posts] AS [p]
+LEFT JOIN [AspNetUsers] AS [a] ON [p].[CreatorId] = [a].[Id]
+LEFT JOIN [Comments] AS [c] ON [p].[ID] = [c].[PostID]
+WHERE ((@__search_0 = N'') OR (CHARINDEX(@__search_0, [p].[Title]) > 0)) OR ((@__search_0 = N'') OR (CHARINDEX(@__search_0, [p].[Content]) > 0))
+ORDER BY [p].[Update] DESC, [p].[ID], [c].[ID]"
+2020-12-10T23:51:57.5355192+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) A data reader was disposed.
+2020-12-10T23:52:00.3561214+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) Creating DbCommand for '"ExecuteReader"'.
+2020-12-10T23:52:00.3573583+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) Created DbCommand for '"ExecuteReader"' (1ms).
+2020-12-10T23:52:00.3593160+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) Executing DbCommand [Parameters=["@__PostID_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [t].[ID], [t].[Approved], [t].[ApproverId], [t].[CategoryID], [t].[Content], [t].[Create], [t].[CreatorId], [t].[Published], [t].[Title], [t].[Update], [t].[category_string], [t].[Id0], [t].[AccessFailedCount], [t].[ConcurrencyStamp], [t].[Email], [t].[EmailConfirmed], [t].[FirstName], [t].[Header], [t].[LastName], [t].[LockoutEnabled], [t].[LockoutEnd], [t].[NormalizedEmail], [t].[NormalizedUserName], [t].[PasswordHash], [t].[PhoneNumber], [t].[PhoneNumberConfirmed], [t].[SecurityStamp], [t].[TwoFactorEnabled], [t].[UserName], [t].[content0], [t1].[ID], [t1].[Content], [t1].[Create], [t1].[ParentID], [t1].[PostID], [t1].[PosterId], [t1].[Id0], [t1].[AccessFailedCount], [t1].[ConcurrencyStamp], [t1].[Email], [t1].[EmailConfirmed], [t1].[FirstName], [t1].[Header], [t1].[LastName], [t1].[LockoutEnabled], [t1].[LockoutEnd], [t1].[NormalizedEmail], [t1].[NormalizedUserName], [t1].[PasswordHash], [t1].[PhoneNumber], [t1].[PhoneNumberConfirmed], [t1].[SecurityStamp], [t1].[TwoFactorEnabled], [t1].[UserName], [t1].[content0], [t1].[ID1], [t1].[Content1], [t1].[Create0], [t1].[ParentID0], [t1].[PostID0], [t1].[PosterId0], [t1].[ID00], [t1].[Content00], [t1].[Create00], [t1].[ParentID00], [t1].[PostID00], [t1].[PosterId00]
+FROM (
+    SELECT TOP(1) [p].[ID], [p].[Approved], [p].[ApproverId], [p].[CategoryID], [p].[Content], [p].[Create], [p].[CreatorId], [p].[Published], [p].[Title], [p].[Update], [p].[category_string], [a].[Id] AS [Id0], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[Header], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[content] AS [content0]
+    FROM [Posts] AS [p]
+    LEFT JOIN [AspNetUsers] AS [a] ON [p].[CreatorId] = [a].[Id]
+    WHERE [p].[ID] = @__PostID_0
+) AS [t]
+LEFT JOIN (
+    SELECT [c].[ID], [c].[Content], [c].[Create], [c].[ParentID], [c].[PostID], [c].[PosterId], [a0].[Id] AS [Id0], [a0].[AccessFailedCount], [a0].[ConcurrencyStamp], [a0].[Email], [a0].[EmailConfirmed], [a0].[FirstName], [a0].[Header], [a0].[LastName], [a0].[LockoutEnabled], [a0].[LockoutEnd], [a0].[NormalizedEmail], [a0].[NormalizedUserName], [a0].[PasswordHash], [a0].[PhoneNumber], [a0].[PhoneNumberConfirmed], [a0].[SecurityStamp], [a0].[TwoFactorEnabled], [a0].[UserName], [a0].[content] AS [content0], [t0].[ID] AS [ID1], [t0].[Content] AS [Content1], [t0].[Create] AS [Create0], [t0].[ParentID] AS [ParentID0], [t0].[PostID] AS [PostID0], [t0].[PosterId] AS [PosterId0], [t0].[ID0] AS [ID00], [t0].[Content0] AS [Content00], [t0].[Create0] AS [Create00], [t0].[ParentID0] AS [ParentID00], [t0].[PostID0] AS [PostID00], [t0].[PosterId0] AS [PosterId00]
+    FROM [Comments] AS [c]
+    LEFT JOIN [AspNetUsers] AS [a0] ON [c].[PosterId] = [a0].[Id]
+    LEFT JOIN (
+        SELECT [c0].[ID], [c0].[Content], [c0].[Create], [c0].[ParentID], [c0].[PostID], [c0].[PosterId], [c1].[ID] AS [ID0], [c1].[Content] AS [Content0], [c1].[Create] AS [Create0], [c1].[ParentID] AS [ParentID0], [c1].[PostID] AS [PostID0], [c1].[PosterId] AS [PosterId0]
+        FROM [Comments] AS [c0]
+        LEFT JOIN [Comments] AS [c1] ON [c0].[ParentID] = [c1].[ID]
+    ) AS [t0] ON [c].[ID] = [t0].[ParentID]
+) AS [t1] ON [t].[ID] = [t1].[PostID]
+ORDER BY [t].[ID], [t1].[ID], [t1].[ID1]"
+2020-12-10T23:52:00.3776561+03:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("19"ms) [Parameters=["@__PostID_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [t].[ID], [t].[Approved], [t].[ApproverId], [t].[CategoryID], [t].[Content], [t].[Create], [t].[CreatorId], [t].[Published], [t].[Title], [t].[Update], [t].[category_string], [t].[Id0], [t].[AccessFailedCount], [t].[ConcurrencyStamp], [t].[Email], [t].[EmailConfirmed], [t].[FirstName], [t].[Header], [t].[LastName], [t].[LockoutEnabled], [t].[LockoutEnd], [t].[NormalizedEmail], [t].[NormalizedUserName], [t].[PasswordHash], [t].[PhoneNumber], [t].[PhoneNumberConfirmed], [t].[SecurityStamp], [t].[TwoFactorEnabled], [t].[UserName], [t].[content0], [t1].[ID], [t1].[Content], [t1].[Create], [t1].[ParentID], [t1].[PostID], [t1].[PosterId], [t1].[Id0], [t1].[AccessFailedCount], [t1].[ConcurrencyStamp], [t1].[Email], [t1].[EmailConfirmed], [t1].[FirstName], [t1].[Header], [t1].[LastName], [t1].[LockoutEnabled], [t1].[LockoutEnd], [t1].[NormalizedEmail], [t1].[NormalizedUserName], [t1].[PasswordHash], [t1].[PhoneNumber], [t1].[PhoneNumberConfirmed], [t1].[SecurityStamp], [t1].[TwoFactorEnabled], [t1].[UserName], [t1].[content0], [t1].[ID1], [t1].[Content1], [t1].[Create0], [t1].[ParentID0], [t1].[PostID0], [t1].[PosterId0], [t1].[ID00], [t1].[Content00], [t1].[Create00], [t1].[ParentID00], [t1].[PostID00], [t1].[PosterId00]
+FROM (
+    SELECT TOP(1) [p].[ID], [p].[Approved], [p].[ApproverId], [p].[CategoryID], [p].[Content], [p].[Create], [p].[CreatorId], [p].[Published], [p].[Title], [p].[Update], [p].[category_string], [a].[Id] AS [Id0], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[Header], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[content] AS [content0]
+    FROM [Posts] AS [p]
+    LEFT JOIN [AspNetUsers] AS [a] ON [p].[CreatorId] = [a].[Id]
+    WHERE [p].[ID] = @__PostID_0
+) AS [t]
+LEFT JOIN (
+    SELECT [c].[ID], [c].[Content], [c].[Create], [c].[ParentID], [c].[PostID], [c].[PosterId], [a0].[Id] AS [Id0], [a0].[AccessFailedCount], [a0].[ConcurrencyStamp], [a0].[Email], [a0].[EmailConfirmed], [a0].[FirstName], [a0].[Header], [a0].[LastName], [a0].[LockoutEnabled], [a0].[LockoutEnd], [a0].[NormalizedEmail], [a0].[NormalizedUserName], [a0].[PasswordHash], [a0].[PhoneNumber], [a0].[PhoneNumberConfirmed], [a0].[SecurityStamp], [a0].[TwoFactorEnabled], [a0].[UserName], [a0].[content] AS [content0], [t0].[ID] AS [ID1], [t0].[Content] AS [Content1], [t0].[Create] AS [Create0], [t0].[ParentID] AS [ParentID0], [t0].[PostID] AS [PostID0], [t0].[PosterId] AS [PosterId0], [t0].[ID0] AS [ID00], [t0].[Content0] AS [Content00], [t0].[Create0] AS [Create00], [t0].[ParentID0] AS [ParentID00], [t0].[PostID0] AS [PostID00], [t0].[PosterId0] AS [PosterId00]
+    FROM [Comments] AS [c]
+    LEFT JOIN [AspNetUsers] AS [a0] ON [c].[PosterId] = [a0].[Id]
+    LEFT JOIN (
+        SELECT [c0].[ID], [c0].[Content], [c0].[Create], [c0].[ParentID], [c0].[PostID], [c0].[PosterId], [c1].[ID] AS [ID0], [c1].[Content] AS [Content0], [c1].[Create] AS [Create0], [c1].[ParentID] AS [ParentID0], [c1].[PostID] AS [PostID0], [c1].[PosterId] AS [PosterId0]
+        FROM [Comments] AS [c0]
+        LEFT JOIN [Comments] AS [c1] ON [c0].[ParentID] = [c1].[ID]
+    ) AS [t0] ON [c].[ID] = [t0].[ParentID]
+) AS [t1] ON [t].[ID] = [t1].[PostID]
+ORDER BY [t].[ID], [t1].[ID], [t1].[ID1]"
+2020-12-10T23:52:00.3840509+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) A data reader was disposed.
+2020-12-10T23:52:00.3865864+03:00 [INF] (Blog111.BusinessManager.PostBusinessManager) PostBusinessManager: GetPostViewModel  OK.
+2020-12-10T23:52:02.7630146+03:00 [INF] (Blog111.Controllers.HomeController) HomeController: Index OK
+2020-12-10T23:52:02.7767916+03:00 [INF] (Blog111.BusinessManager.PostBusinessManager) PostBusinessManager: GetIndexViewModel model OK.
+2020-12-10T23:52:02.7812456+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) Creating DbCommand for '"ExecuteReader"'.
+2020-12-10T23:52:02.7819787+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) Created DbCommand for '"ExecuteReader"' (0ms).
+2020-12-10T23:52:02.7832115+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) Executing DbCommand [Parameters=["@__search_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [p].[ID], [p].[Approved], [p].[ApproverId], [p].[CategoryID], [p].[Content], [p].[Create], [p].[CreatorId], [p].[Published], [p].[Title], [p].[Update], [p].[category_string], [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[Header], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[content], [c].[ID], [c].[Content], [c].[Create], [c].[ParentID], [c].[PostID], [c].[PosterId]
+FROM [Posts] AS [p]
+LEFT JOIN [AspNetUsers] AS [a] ON [p].[CreatorId] = [a].[Id]
+LEFT JOIN [Comments] AS [c] ON [p].[ID] = [c].[PostID]
+WHERE ((@__search_0 = N'') OR (CHARINDEX(@__search_0, [p].[Title]) > 0)) OR ((@__search_0 = N'') OR (CHARINDEX(@__search_0, [p].[Content]) > 0))
+ORDER BY [p].[Update] DESC, [p].[ID], [c].[ID]"
+2020-12-10T23:52:07.9758115+03:00 [INF] (Blog111.Controllers.AdminController) AdminController: Index OK 
+2020-12-10T23:52:07.9992590+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) Creating DbCommand for '"ExecuteReader"'.
+2020-12-10T23:52:08.0000075+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) Created DbCommand for '"ExecuteReader"' (0ms).
+2020-12-10T23:52:08.0284832+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) Executing DbCommand [Parameters=["@__p_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[Header], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[content]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[Id] = @__p_0"
+2020-12-10T23:52:08.0456051+03:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("17"ms) [Parameters=["@__p_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[Header], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[content]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[Id] = @__p_0"
+2020-12-10T23:52:08.0571431+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) A data reader was disposed.
+2020-12-10T23:52:08.0636201+03:00 [INF] (Blog111.BusinessManager.Interfaces.AdminBusinessManager) AdminBusinessManager: GetAdminDashboard OK
+2020-12-10T23:52:08.1231264+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) Creating DbCommand for '"ExecuteReader"'.
+2020-12-10T23:52:08.1239325+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) Created DbCommand for '"ExecuteReader"' (0ms).
+2020-12-10T23:52:08.1250286+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) Executing DbCommand [Parameters=["@__entity_equality_user_0_Id='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [p].[ID], [p].[Approved], [p].[ApproverId], [p].[CategoryID], [p].[Content], [p].[Create], [p].[CreatorId], [p].[Published], [p].[Title], [p].[Update], [p].[category_string], [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[Header], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[content], [a0].[Id], [a0].[AccessFailedCount], [a0].[ConcurrencyStamp], [a0].[Email], [a0].[EmailConfirmed], [a0].[FirstName], [a0].[Header], [a0].[LastName], [a0].[LockoutEnabled], [a0].[LockoutEnd], [a0].[NormalizedEmail], [a0].[NormalizedUserName], [a0].[PasswordHash], [a0].[PhoneNumber], [a0].[PhoneNumberConfirmed], [a0].[SecurityStamp], [a0].[TwoFactorEnabled], [a0].[UserName], [a0].[content], [c].[ID], [c].[Content], [c].[Create], [c].[ParentID], [c].[PostID], [c].[PosterId]
+FROM [Posts] AS [p]
+LEFT JOIN [AspNetUsers] AS [a] ON [p].[CreatorId] = [a].[Id]
+LEFT JOIN [AspNetUsers] AS [a0] ON [p].[ApproverId] = [a0].[Id]
+LEFT JOIN [Comments] AS [c] ON [p].[ID] = [c].[PostID]
+WHERE [a].[Id] = @__entity_equality_user_0_Id
+ORDER BY [p].[ID], [c].[ID]"
+2020-12-10T23:52:08.1332453+03:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("8"ms) [Parameters=["@__entity_equality_user_0_Id='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [p].[ID], [p].[Approved], [p].[ApproverId], [p].[CategoryID], [p].[Content], [p].[Create], [p].[CreatorId], [p].[Published], [p].[Title], [p].[Update], [p].[category_string], [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[Header], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[content], [a0].[Id], [a0].[AccessFailedCount], [a0].[ConcurrencyStamp], [a0].[Email], [a0].[EmailConfirmed], [a0].[FirstName], [a0].[Header], [a0].[LastName], [a0].[LockoutEnabled], [a0].[LockoutEnd], [a0].[NormalizedEmail], [a0].[NormalizedUserName], [a0].[PasswordHash], [a0].[PhoneNumber], [a0].[PhoneNumberConfirmed], [a0].[SecurityStamp], [a0].[TwoFactorEnabled], [a0].[UserName], [a0].[content], [c].[ID], [c].[Content], [c].[Create], [c].[ParentID], [c].[PostID], [c].[PosterId]
+FROM [Posts] AS [p]
+LEFT JOIN [AspNetUsers] AS [a] ON [p].[CreatorId] = [a].[Id]
+LEFT JOIN [AspNetUsers] AS [a0] ON [p].[ApproverId] = [a0].[Id]
+LEFT JOIN [Comments] AS [c] ON [p].[ID] = [c].[PostID]
+WHERE [a].[Id] = @__entity_equality_user_0_Id
+ORDER BY [p].[ID], [c].[ID]"
+2020-12-10T23:52:08.1445107+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) A data reader was disposed.
+2020-12-10T23:52:10.2031441+03:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("7,419"ms) [Parameters=["@__search_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [p].[ID], [p].[Approved], [p].[ApproverId], [p].[CategoryID], [p].[Content], [p].[Create], [p].[CreatorId], [p].[Published], [p].[Title], [p].[Update], [p].[category_string], [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[Header], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[content], [c].[ID], [c].[Content], [c].[Create], [c].[ParentID], [c].[PostID], [c].[PosterId]
+FROM [Posts] AS [p]
+LEFT JOIN [AspNetUsers] AS [a] ON [p].[CreatorId] = [a].[Id]
+LEFT JOIN [Comments] AS [c] ON [p].[ID] = [c].[PostID]
+WHERE ((@__search_0 = N'') OR (CHARINDEX(@__search_0, [p].[Title]) > 0)) OR ((@__search_0 = N'') OR (CHARINDEX(@__search_0, [p].[Content]) > 0))
+ORDER BY [p].[Update] DESC, [p].[ID], [c].[ID]"
+2020-12-10T23:52:10.2247015+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) A data reader was disposed.
+2020-12-10T23:52:10.2274400+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) Creating DbCommand for '"ExecuteReader"'.
+2020-12-10T23:52:10.2280743+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) Created DbCommand for '"ExecuteReader"' (0ms).
+2020-12-10T23:52:10.2291747+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) Executing DbCommand [Parameters=["@__search_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [p].[ID], [p].[Approved], [p].[ApproverId], [p].[CategoryID], [p].[Content], [p].[Create], [p].[CreatorId], [p].[Published], [p].[Title], [p].[Update], [p].[category_string], [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[Header], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[content], [c].[ID], [c].[Content], [c].[Create], [c].[ParentID], [c].[PostID], [c].[PosterId]
+FROM [Posts] AS [p]
+LEFT JOIN [AspNetUsers] AS [a] ON [p].[CreatorId] = [a].[Id]
+LEFT JOIN [Comments] AS [c] ON [p].[ID] = [c].[PostID]
+WHERE ((@__search_0 = N'') OR (CHARINDEX(@__search_0, [p].[Title]) > 0)) OR ((@__search_0 = N'') OR (CHARINDEX(@__search_0, [p].[Content]) > 0))
+ORDER BY [p].[Update] DESC, [p].[ID], [c].[ID]"
+2020-12-10T23:52:10.2328928+03:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("4"ms) [Parameters=["@__search_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [p].[ID], [p].[Approved], [p].[ApproverId], [p].[CategoryID], [p].[Content], [p].[Create], [p].[CreatorId], [p].[Published], [p].[Title], [p].[Update], [p].[category_string], [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[Header], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[content], [c].[ID], [c].[Content], [c].[Create], [c].[ParentID], [c].[PostID], [c].[PosterId]
+FROM [Posts] AS [p]
+LEFT JOIN [AspNetUsers] AS [a] ON [p].[CreatorId] = [a].[Id]
+LEFT JOIN [Comments] AS [c] ON [p].[ID] = [c].[PostID]
+WHERE ((@__search_0 = N'') OR (CHARINDEX(@__search_0, [p].[Title]) > 0)) OR ((@__search_0 = N'') OR (CHARINDEX(@__search_0, [p].[Content]) > 0))
+ORDER BY [p].[Update] DESC, [p].[ID], [c].[ID]"
+2020-12-10T23:52:10.2367118+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) A data reader was disposed.
+2020-12-10T23:52:10.4270526+03:00 [INF] (Serilog.AspNetCore.RequestLoggingMiddleware) HTTP "GET" "/Post/Index/1" responded 404 in 0.6821 ms
+2020-12-10T23:53:36.3482157+03:00 [INF] (Microsoft.Hosting.Lifetime) Now listening on: "https://localhost:5001"
+2020-12-10T23:53:36.4246416+03:00 [INF] (Microsoft.Hosting.Lifetime) Now listening on: "http://localhost:5000"
+2020-12-10T23:53:36.4284560+03:00 [INF] (Microsoft.Hosting.Lifetime) Application started. Press Ctrl+C to shut down.
+2020-12-10T23:53:36.4288815+03:00 [INF] (Microsoft.Hosting.Lifetime) Hosting environment: "Development"
+2020-12-10T23:53:36.4291363+03:00 [INF] (Microsoft.Hosting.Lifetime) Content root path: "C:\Users\vladf\source\repos\Blog111"
+2020-12-10T23:53:37.3375329+03:00 [INF] (Blog111.Controllers.HomeController) HomeController: Index OK
+2020-12-10T23:53:38.0074248+03:00 [INF] (Blog111.BusinessManager.PostBusinessManager) PostBusinessManager: GetIndexViewModel model OK.
+2020-12-10T23:53:38.3347555+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) Creating DbCommand for '"ExecuteReader"'.
+2020-12-10T23:53:38.3727015+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) Created DbCommand for '"ExecuteReader"' (38ms).
+2020-12-10T23:53:38.6328809+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) Executing DbCommand [Parameters=["@__search_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [p].[ID], [p].[Approved], [p].[ApproverId], [p].[CategoryID], [p].[Content], [p].[Create], [p].[CreatorId], [p].[Published], [p].[Title], [p].[Update], [p].[category_string], [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[Header], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[content], [c].[ID], [c].[Content], [c].[Create], [c].[ParentID], [c].[PostID], [c].[PosterId]
+FROM [Posts] AS [p]
+LEFT JOIN [AspNetUsers] AS [a] ON [p].[CreatorId] = [a].[Id]
+LEFT JOIN [Comments] AS [c] ON [p].[ID] = [c].[PostID]
+WHERE ((@__search_0 = N'') OR (CHARINDEX(@__search_0, [p].[Title]) > 0)) OR ((@__search_0 = N'') OR (CHARINDEX(@__search_0, [p].[Content]) > 0))
+ORDER BY [p].[Update] DESC, [p].[ID], [c].[ID]"
+2020-12-10T23:53:38.7002763+03:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("76"ms) [Parameters=["@__search_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [p].[ID], [p].[Approved], [p].[ApproverId], [p].[CategoryID], [p].[Content], [p].[Create], [p].[CreatorId], [p].[Published], [p].[Title], [p].[Update], [p].[category_string], [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[Header], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[content], [c].[ID], [c].[Content], [c].[Create], [c].[ParentID], [c].[PostID], [c].[PosterId]
+FROM [Posts] AS [p]
+LEFT JOIN [AspNetUsers] AS [a] ON [p].[CreatorId] = [a].[Id]
+LEFT JOIN [Comments] AS [c] ON [p].[ID] = [c].[PostID]
+WHERE ((@__search_0 = N'') OR (CHARINDEX(@__search_0, [p].[Title]) > 0)) OR ((@__search_0 = N'') OR (CHARINDEX(@__search_0, [p].[Content]) > 0))
+ORDER BY [p].[Update] DESC, [p].[ID], [c].[ID]"
+2020-12-10T23:53:38.8487094+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) A data reader was disposed.
+2020-12-10T23:53:38.8627532+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) Creating DbCommand for '"ExecuteReader"'.
+2020-12-10T23:53:38.8632137+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) Created DbCommand for '"ExecuteReader"' (0ms).
+2020-12-10T23:53:38.8646971+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) Executing DbCommand [Parameters=["@__search_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [p].[ID], [p].[Approved], [p].[ApproverId], [p].[CategoryID], [p].[Content], [p].[Create], [p].[CreatorId], [p].[Published], [p].[Title], [p].[Update], [p].[category_string], [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[Header], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[content], [c].[ID], [c].[Content], [c].[Create], [c].[ParentID], [c].[PostID], [c].[PosterId]
+FROM [Posts] AS [p]
+LEFT JOIN [AspNetUsers] AS [a] ON [p].[CreatorId] = [a].[Id]
+LEFT JOIN [Comments] AS [c] ON [p].[ID] = [c].[PostID]
+WHERE ((@__search_0 = N'') OR (CHARINDEX(@__search_0, [p].[Title]) > 0)) OR ((@__search_0 = N'') OR (CHARINDEX(@__search_0, [p].[Content]) > 0))
+ORDER BY [p].[Update] DESC, [p].[ID], [c].[ID]"
+2020-12-10T23:53:38.8724792+03:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("7"ms) [Parameters=["@__search_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [p].[ID], [p].[Approved], [p].[ApproverId], [p].[CategoryID], [p].[Content], [p].[Create], [p].[CreatorId], [p].[Published], [p].[Title], [p].[Update], [p].[category_string], [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[Header], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[content], [c].[ID], [c].[Content], [c].[Create], [c].[ParentID], [c].[PostID], [c].[PosterId]
+FROM [Posts] AS [p]
+LEFT JOIN [AspNetUsers] AS [a] ON [p].[CreatorId] = [a].[Id]
+LEFT JOIN [Comments] AS [c] ON [p].[ID] = [c].[PostID]
+WHERE ((@__search_0 = N'') OR (CHARINDEX(@__search_0, [p].[Title]) > 0)) OR ((@__search_0 = N'') OR (CHARINDEX(@__search_0, [p].[Content]) > 0))
+ORDER BY [p].[Update] DESC, [p].[ID], [c].[ID]"
+2020-12-10T23:53:38.8782264+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) A data reader was disposed.
+2020-12-10T23:53:42.3896384+03:00 [INF] (Blog111.Controllers.AdminController) AdminController: Index OK 
+2020-12-10T23:53:42.4615111+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) Creating DbCommand for '"ExecuteReader"'.
+2020-12-10T23:53:42.4630058+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) Created DbCommand for '"ExecuteReader"' (1ms).
+2020-12-10T23:53:42.4689055+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) Executing DbCommand [Parameters=["@__p_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[Header], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[content]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[Id] = @__p_0"
+2020-12-10T23:53:42.4851404+03:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("16"ms) [Parameters=["@__p_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[Header], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[content]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[Id] = @__p_0"
+2020-12-10T23:53:42.4988534+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) A data reader was disposed.
+2020-12-10T23:53:42.5054405+03:00 [INF] (Blog111.BusinessManager.Interfaces.AdminBusinessManager) AdminBusinessManager: GetAdminDashboard OK
+2020-12-10T23:53:42.5490481+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) Creating DbCommand for '"ExecuteReader"'.
+2020-12-10T23:53:42.5497439+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) Created DbCommand for '"ExecuteReader"' (0ms).
+2020-12-10T23:53:42.5529272+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) Executing DbCommand [Parameters=["@__entity_equality_user_0_Id='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [p].[ID], [p].[Approved], [p].[ApproverId], [p].[CategoryID], [p].[Content], [p].[Create], [p].[CreatorId], [p].[Published], [p].[Title], [p].[Update], [p].[category_string], [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[Header], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[content], [a0].[Id], [a0].[AccessFailedCount], [a0].[ConcurrencyStamp], [a0].[Email], [a0].[EmailConfirmed], [a0].[FirstName], [a0].[Header], [a0].[LastName], [a0].[LockoutEnabled], [a0].[LockoutEnd], [a0].[NormalizedEmail], [a0].[NormalizedUserName], [a0].[PasswordHash], [a0].[PhoneNumber], [a0].[PhoneNumberConfirmed], [a0].[SecurityStamp], [a0].[TwoFactorEnabled], [a0].[UserName], [a0].[content], [c].[ID], [c].[Content], [c].[Create], [c].[ParentID], [c].[PostID], [c].[PosterId]
+FROM [Posts] AS [p]
+LEFT JOIN [AspNetUsers] AS [a] ON [p].[CreatorId] = [a].[Id]
+LEFT JOIN [AspNetUsers] AS [a0] ON [p].[ApproverId] = [a0].[Id]
+LEFT JOIN [Comments] AS [c] ON [p].[ID] = [c].[PostID]
+WHERE [a].[Id] = @__entity_equality_user_0_Id
+ORDER BY [p].[ID], [c].[ID]"
+2020-12-10T23:53:42.5607315+03:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("8"ms) [Parameters=["@__entity_equality_user_0_Id='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [p].[ID], [p].[Approved], [p].[ApproverId], [p].[CategoryID], [p].[Content], [p].[Create], [p].[CreatorId], [p].[Published], [p].[Title], [p].[Update], [p].[category_string], [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[Header], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[content], [a0].[Id], [a0].[AccessFailedCount], [a0].[ConcurrencyStamp], [a0].[Email], [a0].[EmailConfirmed], [a0].[FirstName], [a0].[Header], [a0].[LastName], [a0].[LockoutEnabled], [a0].[LockoutEnd], [a0].[NormalizedEmail], [a0].[NormalizedUserName], [a0].[PasswordHash], [a0].[PhoneNumber], [a0].[PhoneNumberConfirmed], [a0].[SecurityStamp], [a0].[TwoFactorEnabled], [a0].[UserName], [a0].[content], [c].[ID], [c].[Content], [c].[Create], [c].[ParentID], [c].[PostID], [c].[PosterId]
+FROM [Posts] AS [p]
+LEFT JOIN [AspNetUsers] AS [a] ON [p].[CreatorId] = [a].[Id]
+LEFT JOIN [AspNetUsers] AS [a0] ON [p].[ApproverId] = [a0].[Id]
+LEFT JOIN [Comments] AS [c] ON [p].[ID] = [c].[PostID]
+WHERE [a].[Id] = @__entity_equality_user_0_Id
+ORDER BY [p].[ID], [c].[ID]"
+2020-12-10T23:53:42.5722877+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) A data reader was disposed.
+2020-12-10T23:53:44.3908478+03:00 [INF] (Serilog.AspNetCore.RequestLoggingMiddleware) HTTP "GET" "/Post/Index/1" responded 404 in 0.8777 ms
+2020-12-10T23:53:47.3227223+03:00 [INF] (Blog111.Controllers.AdminController) AdminController: Index OK 
+2020-12-10T23:53:47.3333376+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) Creating DbCommand for '"ExecuteReader"'.
+2020-12-10T23:53:47.3341948+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) Created DbCommand for '"ExecuteReader"' (0ms).
+2020-12-10T23:53:47.3377192+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) Executing DbCommand [Parameters=["@__p_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[Header], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[content]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[Id] = @__p_0"
+2020-12-10T23:53:47.3456111+03:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("8"ms) [Parameters=["@__p_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[Header], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[content]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[Id] = @__p_0"
+2020-12-10T23:53:47.3472018+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) A data reader was disposed.
+2020-12-10T23:53:47.3475354+03:00 [INF] (Blog111.BusinessManager.Interfaces.AdminBusinessManager) AdminBusinessManager: GetAdminDashboard OK
+2020-12-10T23:53:47.3489652+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) Creating DbCommand for '"ExecuteReader"'.
+2020-12-10T23:53:47.3491969+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) Created DbCommand for '"ExecuteReader"' (0ms).
+2020-12-10T23:53:47.3497273+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) Executing DbCommand [Parameters=["@__entity_equality_user_0_Id='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [p].[ID], [p].[Approved], [p].[ApproverId], [p].[CategoryID], [p].[Content], [p].[Create], [p].[CreatorId], [p].[Published], [p].[Title], [p].[Update], [p].[category_string], [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[Header], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[content], [a0].[Id], [a0].[AccessFailedCount], [a0].[ConcurrencyStamp], [a0].[Email], [a0].[EmailConfirmed], [a0].[FirstName], [a0].[Header], [a0].[LastName], [a0].[LockoutEnabled], [a0].[LockoutEnd], [a0].[NormalizedEmail], [a0].[NormalizedUserName], [a0].[PasswordHash], [a0].[PhoneNumber], [a0].[PhoneNumberConfirmed], [a0].[SecurityStamp], [a0].[TwoFactorEnabled], [a0].[UserName], [a0].[content], [c].[ID], [c].[Content], [c].[Create], [c].[ParentID], [c].[PostID], [c].[PosterId]
+FROM [Posts] AS [p]
+LEFT JOIN [AspNetUsers] AS [a] ON [p].[CreatorId] = [a].[Id]
+LEFT JOIN [AspNetUsers] AS [a0] ON [p].[ApproverId] = [a0].[Id]
+LEFT JOIN [Comments] AS [c] ON [p].[ID] = [c].[PostID]
+WHERE [a].[Id] = @__entity_equality_user_0_Id
+ORDER BY [p].[ID], [c].[ID]"
+2020-12-10T23:53:47.3546733+03:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("5"ms) [Parameters=["@__entity_equality_user_0_Id='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [p].[ID], [p].[Approved], [p].[ApproverId], [p].[CategoryID], [p].[Content], [p].[Create], [p].[CreatorId], [p].[Published], [p].[Title], [p].[Update], [p].[category_string], [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[Header], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[content], [a0].[Id], [a0].[AccessFailedCount], [a0].[ConcurrencyStamp], [a0].[Email], [a0].[EmailConfirmed], [a0].[FirstName], [a0].[Header], [a0].[LastName], [a0].[LockoutEnabled], [a0].[LockoutEnd], [a0].[NormalizedEmail], [a0].[NormalizedUserName], [a0].[PasswordHash], [a0].[PhoneNumber], [a0].[PhoneNumberConfirmed], [a0].[SecurityStamp], [a0].[TwoFactorEnabled], [a0].[UserName], [a0].[content], [c].[ID], [c].[Content], [c].[Create], [c].[ParentID], [c].[PostID], [c].[PosterId]
+FROM [Posts] AS [p]
+LEFT JOIN [AspNetUsers] AS [a] ON [p].[CreatorId] = [a].[Id]
+LEFT JOIN [AspNetUsers] AS [a0] ON [p].[ApproverId] = [a0].[Id]
+LEFT JOIN [Comments] AS [c] ON [p].[ID] = [c].[PostID]
+WHERE [a].[Id] = @__entity_equality_user_0_Id
+ORDER BY [p].[ID], [c].[ID]"
+2020-12-10T23:53:47.3608342+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) A data reader was disposed.
+2020-12-10T23:54:06.7858621+03:00 [INF] (Microsoft.Hosting.Lifetime) Now listening on: "https://localhost:5001"
+2020-12-10T23:54:06.8915122+03:00 [INF] (Microsoft.Hosting.Lifetime) Now listening on: "http://localhost:5000"
+2020-12-10T23:54:06.8954235+03:00 [INF] (Microsoft.Hosting.Lifetime) Application started. Press Ctrl+C to shut down.
+2020-12-10T23:54:06.8957309+03:00 [INF] (Microsoft.Hosting.Lifetime) Hosting environment: "Development"
+2020-12-10T23:54:06.8961145+03:00 [INF] (Microsoft.Hosting.Lifetime) Content root path: "C:\Users\vladf\source\repos\Blog111"
+2020-12-10T23:54:07.9969244+03:00 [INF] (Blog111.Controllers.HomeController) HomeController: Index OK
+2020-12-10T23:54:08.7597041+03:00 [INF] (Blog111.BusinessManager.PostBusinessManager) PostBusinessManager: GetIndexViewModel model OK.
+2020-12-10T23:54:09.1072612+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) Creating DbCommand for '"ExecuteReader"'.
+2020-12-10T23:54:09.1479552+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) Created DbCommand for '"ExecuteReader"' (39ms).
+2020-12-10T23:54:09.4521160+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) Executing DbCommand [Parameters=["@__search_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [p].[ID], [p].[Approved], [p].[ApproverId], [p].[CategoryID], [p].[Content], [p].[Create], [p].[CreatorId], [p].[Published], [p].[Title], [p].[Update], [p].[category_string], [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[Header], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[content], [c].[ID], [c].[Content], [c].[Create], [c].[ParentID], [c].[PostID], [c].[PosterId]
+FROM [Posts] AS [p]
+LEFT JOIN [AspNetUsers] AS [a] ON [p].[CreatorId] = [a].[Id]
+LEFT JOIN [Comments] AS [c] ON [p].[ID] = [c].[PostID]
+WHERE ((@__search_0 = N'') OR (CHARINDEX(@__search_0, [p].[Title]) > 0)) OR ((@__search_0 = N'') OR (CHARINDEX(@__search_0, [p].[Content]) > 0))
+ORDER BY [p].[Update] DESC, [p].[ID], [c].[ID]"
+2020-12-10T23:54:09.5283734+03:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("85"ms) [Parameters=["@__search_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [p].[ID], [p].[Approved], [p].[ApproverId], [p].[CategoryID], [p].[Content], [p].[Create], [p].[CreatorId], [p].[Published], [p].[Title], [p].[Update], [p].[category_string], [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[Header], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[content], [c].[ID], [c].[Content], [c].[Create], [c].[ParentID], [c].[PostID], [c].[PosterId]
+FROM [Posts] AS [p]
+LEFT JOIN [AspNetUsers] AS [a] ON [p].[CreatorId] = [a].[Id]
+LEFT JOIN [Comments] AS [c] ON [p].[ID] = [c].[PostID]
+WHERE ((@__search_0 = N'') OR (CHARINDEX(@__search_0, [p].[Title]) > 0)) OR ((@__search_0 = N'') OR (CHARINDEX(@__search_0, [p].[Content]) > 0))
+ORDER BY [p].[Update] DESC, [p].[ID], [c].[ID]"
+2020-12-10T23:54:09.7013958+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) A data reader was disposed.
+2020-12-10T23:54:09.7201961+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) Creating DbCommand for '"ExecuteReader"'.
+2020-12-10T23:54:09.7207747+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) Created DbCommand for '"ExecuteReader"' (0ms).
+2020-12-10T23:54:09.7230995+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) Executing DbCommand [Parameters=["@__search_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [p].[ID], [p].[Approved], [p].[ApproverId], [p].[CategoryID], [p].[Content], [p].[Create], [p].[CreatorId], [p].[Published], [p].[Title], [p].[Update], [p].[category_string], [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[Header], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[content], [c].[ID], [c].[Content], [c].[Create], [c].[ParentID], [c].[PostID], [c].[PosterId]
+FROM [Posts] AS [p]
+LEFT JOIN [AspNetUsers] AS [a] ON [p].[CreatorId] = [a].[Id]
+LEFT JOIN [Comments] AS [c] ON [p].[ID] = [c].[PostID]
+WHERE ((@__search_0 = N'') OR (CHARINDEX(@__search_0, [p].[Title]) > 0)) OR ((@__search_0 = N'') OR (CHARINDEX(@__search_0, [p].[Content]) > 0))
+ORDER BY [p].[Update] DESC, [p].[ID], [c].[ID]"
+2020-12-10T23:54:09.7316620+03:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("9"ms) [Parameters=["@__search_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [p].[ID], [p].[Approved], [p].[ApproverId], [p].[CategoryID], [p].[Content], [p].[Create], [p].[CreatorId], [p].[Published], [p].[Title], [p].[Update], [p].[category_string], [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[Header], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[content], [c].[ID], [c].[Content], [c].[Create], [c].[ParentID], [c].[PostID], [c].[PosterId]
+FROM [Posts] AS [p]
+LEFT JOIN [AspNetUsers] AS [a] ON [p].[CreatorId] = [a].[Id]
+LEFT JOIN [Comments] AS [c] ON [p].[ID] = [c].[PostID]
+WHERE ((@__search_0 = N'') OR (CHARINDEX(@__search_0, [p].[Title]) > 0)) OR ((@__search_0 = N'') OR (CHARINDEX(@__search_0, [p].[Content]) > 0))
+ORDER BY [p].[Update] DESC, [p].[ID], [c].[ID]"
+2020-12-10T23:54:09.7356646+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) A data reader was disposed.
+2020-12-10T23:54:48.2700122+03:00 [INF] (Microsoft.Hosting.Lifetime) Now listening on: "https://localhost:5001"
+2020-12-10T23:54:48.3346802+03:00 [INF] (Microsoft.Hosting.Lifetime) Now listening on: "http://localhost:5000"
+2020-12-10T23:54:48.3377935+03:00 [INF] (Microsoft.Hosting.Lifetime) Application started. Press Ctrl+C to shut down.
+2020-12-10T23:54:48.3380834+03:00 [INF] (Microsoft.Hosting.Lifetime) Hosting environment: "Development"
+2020-12-10T23:54:48.3383251+03:00 [INF] (Microsoft.Hosting.Lifetime) Content root path: "C:\Users\vladf\source\repos\Blog111"
+2020-12-10T23:54:49.7156364+03:00 [INF] (Blog111.Controllers.HomeController) HomeController: Index OK
+2020-12-10T23:54:50.4172717+03:00 [INF] (Blog111.BusinessManager.PostBusinessManager) PostBusinessManager: GetIndexViewModel model OK.
+2020-12-10T23:54:50.7513302+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) Creating DbCommand for '"ExecuteReader"'.
+2020-12-10T23:54:50.7909725+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) Created DbCommand for '"ExecuteReader"' (38ms).
+2020-12-10T23:54:51.0653029+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) Executing DbCommand [Parameters=["@__search_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [p].[ID], [p].[Approved], [p].[ApproverId], [p].[CategoryID], [p].[Content], [p].[Create], [p].[CreatorId], [p].[Published], [p].[Title], [p].[Update], [p].[category_string], [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[Header], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[content], [c].[ID], [c].[Content], [c].[Create], [c].[ParentID], [c].[PostID], [c].[PosterId]
+FROM [Posts] AS [p]
+LEFT JOIN [AspNetUsers] AS [a] ON [p].[CreatorId] = [a].[Id]
+LEFT JOIN [Comments] AS [c] ON [p].[ID] = [c].[PostID]
+WHERE ((@__search_0 = N'') OR (CHARINDEX(@__search_0, [p].[Title]) > 0)) OR ((@__search_0 = N'') OR (CHARINDEX(@__search_0, [p].[Content]) > 0))
+ORDER BY [p].[Update] DESC, [p].[ID], [c].[ID]"
+2020-12-10T23:54:51.1343576+03:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("78"ms) [Parameters=["@__search_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [p].[ID], [p].[Approved], [p].[ApproverId], [p].[CategoryID], [p].[Content], [p].[Create], [p].[CreatorId], [p].[Published], [p].[Title], [p].[Update], [p].[category_string], [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[Header], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[content], [c].[ID], [c].[Content], [c].[Create], [c].[ParentID], [c].[PostID], [c].[PosterId]
+FROM [Posts] AS [p]
+LEFT JOIN [AspNetUsers] AS [a] ON [p].[CreatorId] = [a].[Id]
+LEFT JOIN [Comments] AS [c] ON [p].[ID] = [c].[PostID]
+WHERE ((@__search_0 = N'') OR (CHARINDEX(@__search_0, [p].[Title]) > 0)) OR ((@__search_0 = N'') OR (CHARINDEX(@__search_0, [p].[Content]) > 0))
+ORDER BY [p].[Update] DESC, [p].[ID], [c].[ID]"
+2020-12-10T23:54:51.2947372+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) A data reader was disposed.
+2020-12-10T23:54:51.3098206+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) Creating DbCommand for '"ExecuteReader"'.
+2020-12-10T23:54:51.3102995+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) Created DbCommand for '"ExecuteReader"' (0ms).
+2020-12-10T23:54:51.3119033+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) Executing DbCommand [Parameters=["@__search_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [p].[ID], [p].[Approved], [p].[ApproverId], [p].[CategoryID], [p].[Content], [p].[Create], [p].[CreatorId], [p].[Published], [p].[Title], [p].[Update], [p].[category_string], [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[Header], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[content], [c].[ID], [c].[Content], [c].[Create], [c].[ParentID], [c].[PostID], [c].[PosterId]
+FROM [Posts] AS [p]
+LEFT JOIN [AspNetUsers] AS [a] ON [p].[CreatorId] = [a].[Id]
+LEFT JOIN [Comments] AS [c] ON [p].[ID] = [c].[PostID]
+WHERE ((@__search_0 = N'') OR (CHARINDEX(@__search_0, [p].[Title]) > 0)) OR ((@__search_0 = N'') OR (CHARINDEX(@__search_0, [p].[Content]) > 0))
+ORDER BY [p].[Update] DESC, [p].[ID], [c].[ID]"
+2020-12-10T23:54:51.3191164+03:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("7"ms) [Parameters=["@__search_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [p].[ID], [p].[Approved], [p].[ApproverId], [p].[CategoryID], [p].[Content], [p].[Create], [p].[CreatorId], [p].[Published], [p].[Title], [p].[Update], [p].[category_string], [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[Header], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[content], [c].[ID], [c].[Content], [c].[Create], [c].[ParentID], [c].[PostID], [c].[PosterId]
+FROM [Posts] AS [p]
+LEFT JOIN [AspNetUsers] AS [a] ON [p].[CreatorId] = [a].[Id]
+LEFT JOIN [Comments] AS [c] ON [p].[ID] = [c].[PostID]
+WHERE ((@__search_0 = N'') OR (CHARINDEX(@__search_0, [p].[Title]) > 0)) OR ((@__search_0 = N'') OR (CHARINDEX(@__search_0, [p].[Content]) > 0))
+ORDER BY [p].[Update] DESC, [p].[ID], [c].[ID]"
+2020-12-10T23:54:51.3241683+03:00 [DBG] (Microsoft.EntityFrameworkCore.Database.Command) A data reader was disposed.

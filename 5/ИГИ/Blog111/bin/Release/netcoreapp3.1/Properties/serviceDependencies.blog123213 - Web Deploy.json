@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "mssql1": {
+      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroupName')]/providers/Microsoft.Sql/servers/blog111dbserver/databases/Blog111_db",
+      "type": "mssql.azure",
+      "connectionId": "Blog",
+      "secretStore": "AzureAppSettings"
+    }
+  }
+}

@@ -1,0 +1,64 @@
+﻿
+    @model Blog111.Models.BlogViewModels.PostViewModel
+    @{
+        Layout = "_HomeLayout";
+        ViewData["HeaderImage"] = $"../../UserFiles/Blogs/{Model.Post.ID}/HeaderImage.jpg";
+        ViewData["HeaderTitle"] = Model.Post.Title;
+        ViewData["AuthorName"] = $"{Model.Post.Creator.FirstName} {Model.Post.Creator.LastName}";
+        ViewData["PostDate"] = Model.Post.Update.ToString("MMMM d, yyyy");
+        ViewData["AuthorId"] = Model.Post.Creator.Id;
+    }
+
+    <article>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-md-10 mx-auto">
+                    @Html.Raw(Model.Post.Content)
+                </div>
+            </div>
+            <div class="row mt-5">
+                <div class="col-lg-8 col-md-10 mx-auto">
+                    <h3 class="mb-5">@Model.Post.Comments.Count() Comments</h3>
+                    <ul class="comment-list comment-top" list="@Model.Post.Comments" count="0" id="comlist">
+                        @foreach (var comment in Model.Post.Comments.Where(comment => comment.Parent is null))
+                        {
+                            <li class="comment" style="margin-top: 30px;">
+                                <div class="comment-body">
+                                    <h4 class="commenter-name">@comment.Poster.FirstName @comment.Poster.LastName</h4>
+                                    <div class="comment-date date-output">@comment.Create</div>
+                                    <p class="comment-message">@comment.Content</p>
+
+                                </div>
+
+                                <hr>
+                            </li>
+
+                        }
+                    </ul>
+                    @if (User.Identity.IsAuthenticated)
+                    {
+                        <div>
+                            <form>
+                                <input asp-for="Post.ID" readonly hidden id="postId" />
+                                <input asp-for="User.FirstName" readonly hidden id="uF" />
+                                <input asp-for="User.LastName" readonly hidden id="uL" />
+                                <div class="form-group">
+                                    <label for="comment">Comment</label>
+                                    <textarea asp-for="Comment.Content" class="form-control" rows="3" required id="content"></textarea>
+                                    <button type="submit" class="btn btn-outline-primary post-btn" id="send">Post</button>
+                                </div>
+                            </form>
+                        </div>
+                    }
+                    else
+                    {
+                        <a class="reply-btn btn" asp-area="Identity" asp-page="/Account/Login" asp-route-ReturnUrl="~/Post/@Model.Post.ID">Login to comment this Post</a>
+                    }
+                </div>
+            </div>
+        </div>
+
+    </article>
+    <script src="~/js/signalr/dist/browser/signalr.min.js"></script>
+    <script src="~/js/sendComments.js"></script>
+    <script src="~/js/time.js"></script>

@@ -1,0 +1,26 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:xandroid="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.BasketActivity">
+
+    <TextView
+        android:id="@+id/BasketHelpTips"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#7593e6"
+        android:fontFamily="serif"
+        android:textSize="20sp"
+        android:text="Чтобы удОлить, свайпани налево." />
+
+    <ListView
+        android:id="@+id/basketList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="60dp"
+        style="@style/ListBackgroundColor">
+    </ListView>
+
+</RelativeLayout>

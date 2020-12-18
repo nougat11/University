@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Этот файл используется процессом публикации или упаковки вашего веб-проекта. Можно настроить поведение этого процесса,
+изменив этот файл MSBuild. Подробности см. на странице https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAmtIhD8uDR0uh+nNEKZ9rDQAAAAACAAAAAAAQZgAAAAEAACAAAADHdx3xIf5nHB5xwK5P/CZ5zPaKV3LutxeMjx1CioDXSgAAAAAOgAAAAAIAACAAAABeW8YfXC0+gqb8Gn2FCbjygwxPYKuJZQaDWc+gE8kSmoAAAABVaZvUQeYKGz8ce2rRPrA3HJNmsKeO9Ukypwujzi9DC+V2to8kKYj/HPlYyDFFAAszlur3ZUGOZHbjU5HGiTE+gNZ/mb6rn5sSn4epRazcCSKPLFmI50EHG6KWQAomfehuj0ordfqFRGuMLK1aXZstO7dChRhrwKlizj0uYCLfZkAAAACgqMtBnRCvoSrhbEQquu+9oX2+1vyT9j51YNSLTEfmnEhYYXbGSFf93kmp+rQkh47XRunNqxqxGyd1OORtuAyk</EncryptedPassword>
+  </PropertyGroup>
+  <ItemGroup>
+    <EFMigrations Include="Blog111.Data.ApplicationDbContext">
+      <Value>Data Source=tcp:blog111dbserver.database.windows.net,1433%3bInitial Catalog=Blog111_db%3bUser Id=vladik%40blog111dbserver%3bPassword=Vveliki_228</Value>
+    </EFMigrations>
+  </ItemGroup>
+</Project>

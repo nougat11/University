@@ -1,0 +1,47 @@
+﻿@model Blog111.Models.HomeViewModels.CategoryViewModel
+@using PagedList.Core.Mvc
+@{
+    Layout = "_HomeLayout";
+    ViewData["HeaderImage"] = $"../../UserFiles/Categories/{Model.Category.ID}/HeaderImage.jpg";
+    ViewData["HeaderTitle"] = $"{Model.Category.Title}";
+    ViewData["Header"] = Model.Category.Title;
+}
+
+<article>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-md-10 mx-auto">
+                @Html.Raw(Model.Category.Description)
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-8 col-md-10 mx-auto">
+                <form asp-controller="Home" asp-action="Category" class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0">
+                    <div class="input-group mb-3">
+                        <input name="AuthorId" hidden readonly value="@Model.Category.ID" />
+                        <input asp-for="SearchString" type="text" class="form-control" placeholder="Search posts for..." />
+                        <div class="input-group-append">
+                            <button class="btn btn-outline-secondary" style="padding: 0 10px 0 10px">Search</button>
+                        </div>
+                    </div>
+                </form>
+                <div class="row align-content-center">
+                    @foreach (var post in Model.Posts)
+                    {
+                        <div class="col-lg-4 col-md-3 mb-4">
+                            <div class="card border-0 shadow">
+                                <img src="~/UserFiles/Blogs/@post.ID/HeaderImage.jpg" class="card-img-top" />
+                                <div class="card-body">
+                                    <div class="row text-center" style="margin: 0px auto 10px 0px;">
+                                        <h5 class="card-title text-center w-100"><a asp-controller="Blog" asp-action="Index" asp-route-id="@post.ID">@post.Title</a></h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                </div>
+                <pager class="pager-container" list="@Model.Posts" options="@PagedListRenderOptions.Bootstrap4Full" asp-action="Index" asp-controller="Home" asp-route-query="@Model.SearchString"></pager>
+            </div>
+        </div>
+    </div>
+</article>

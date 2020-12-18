@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding = "16dp">
+
+
+    <ImageView
+        android:id="@+id/basketImage"
+        android:layout_marginEnd="16dp"
+        android:layout_width="70dp"
+        android:layout_height="80dp" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/basketName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:text="@string/item_name" />
+
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:textAlignment="gravity">
+
+            <TextView
+                android:id="@+id/basketAmount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginEnd="10dp"
+                android:textColor="@android:color/black"
+                android:text="Количество" />
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/basketBtn"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="#e6c875"
+                android:src="@drawable/ic_basket_add"
+                android:layout_marginStart="10dp"/>
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/removeBasketBtn"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="#e6c875"
+                android:src="@drawable/ic_baseline_delete_24"
+                android:layout_marginStart="10dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:textAlignment="gravity"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:id="@+id/basketPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/black"
+                android:text="@string/price"/>
+        </LinearLayout>
+
+
+    </LinearLayout>
+</LinearLayout>

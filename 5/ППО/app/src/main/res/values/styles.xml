@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name = "ListBackgroundColor" parent="Widget.AppCompat.ListView">
+        <item name ="android:background">#00FF00</item>
+    </style>
+    <style name="Text">
+        <item name="android:textSize">18sp</item>
+        <item name="fontFamily">serif</item>
+    </style>
+    <style name="TextView">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textAppearance">@style/Text</item>
+    </style>
+    <style name="Text.Primary">
+        <item name="android:textColor">@color/colorPrimaryDark</item>
+    </style>
+    <style name="TextView.Primary">
+        <item name="android:textAppearance">@style/Text.Primary</item>
+    </style>
+    <style name="TextView.Primary.Header">
+        <item name="android:textAppearance">@style/Text.Primary.Header</item>
+    </style>
+    <style name="Text.Primary.Header">
+        <item name="android:textSize">24sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="Text.Primary.Bold">
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="TextView.Primary.Bold">
+        <item name="android:textAppearance">@style/Text.Primary.Bold</item>
+    </style>
+</resources>
