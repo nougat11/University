@@ -1,0 +1,33 @@
+CREATE TABLE LOGGING_ACTIONS(
+ID NUMBER,
+operation VARCHAR2(10),
+ex_time TIMESTAMP,
+stud_id NUMBER,
+stud_name VARCHAR2(10),
+stud_group_id NUMBER,
+nstud_id NUMBER,
+nstud_name VARCHAR2(10),
+nstud_group_id NUMBER
+);
+CREATE SEQUENCE logger_seq;
+CREATE OR replace trigger students_logger
+AFTER INSERT OR UPDATE OR DELETE
+ON STUDENTS
+FOR EACH ROW
+DECLARE
+TEMP_ID NUMBER;
+BEGIN
+SELECT logger_seq.NEXTVAL into TEMP_ID FROM dual;
+IF INSERTING THEN
+INSERT INTO LOGGING_ACTIONS VALUES(TEMP_ID, 'INSERT', SYSTIMESTAMP,
+:new.id, :new.name, :new.group_id, NULL, NULL, NULL);
+END IF;
+IF UPDATING THEN
+INSERT INTO LOGGING_ACTIONS VALUES(TEMP_ID, 'UPDATE', SYSTIMESTAMP,
+:old.id, :old.name, :old.group_id, :new.id, :new.name, :new.group_id);
+END IF;
+IF DELETING THEN
+INSERT INTO LOGGING_ACTIONS VALUES(TEMP_ID, 'delete', SYSTIMESTAMP, :old.id,
+:old.name, :old.group_id, NULL, NULL, NULL);
+END IF;
+END;
