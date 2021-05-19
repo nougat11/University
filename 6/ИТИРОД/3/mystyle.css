@@ -1,0 +1,134 @@
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+}
+
+html {
+    height: 100vh;
+    width: 100vw;
+}
+
+header {
+    padding: 15px;
+    background-color: black;
+}
+
+a {
+    color: white;
+    font-size: 36px;
+    font-family: Roboto;
+    text-decoration: none;
+}
+
+.Homelink {
+    justify-self: flex-start;
+}
+
+.header-container {
+    padding: 0 150px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.reg {
+    padding: 0 15px;
+}
+
+nav {
+    display: flex;
+    padding: 10px;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.banner {
+    background-image: url("images/wallpaper.jpg");
+    padding: 250px 0;
+    width: 100%;
+    height: 60%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+article {
+    text-align: center;
+}
+
+h1 {
+    font-size: 144px;
+    font-family: Roboto;
+    margin: 0;
+    padding: 0;
+    color: red;
+}
+
+h2 {
+    font-size: 144px;
+    font-family: Roboto;
+    color: darkkhaki;
+    margin: 0;
+    padding: 0;
+}
+
+h3 {
+    font-family: Roboto Regular;
+    font-size: 72px;
+    margin: 0;
+    padding: 0;
+    color: darkmagenta;
+}
+
+footer {
+    height: 100px;
+    background-color: black;
+}
+
+.whilelogo {
+    width: 222px;
+    height: 68px;
+}
+
+.sociallogo {
+    width: 50px;
+    height: 50px;
+}
+
+footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+footer p {
+    color: white;
+    font-size: 36px;
+    font-family: Roboto;
+}
+
+.social-logo {
+    background-image: url("images/whitelogo.png");
+    width: 18%;
+    height: 70%;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.blacklogo {
+    background-image: url("images/blacklogo.png");
+    width: 100%;
+    height: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+a:focus {
+    background-color: red;
+}

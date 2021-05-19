@@ -1,0 +1,73 @@
+.blacklogo {
+    width: 197px;
+    height: 69px;
+}
+
+form {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+fieldset {
+    border: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+legend {
+    font-family: Roboto, sans-serif;
+    font-size: 48px;
+    font-weight: 900;
+    margin: 0 auto;
+}
+
+input {
+    width: 80%;
+    height: 54px;
+    font-size: 48px;
+    border-radius: 15px;
+    margin: 10px 0;
+}
+
+input:focus {
+    border-radius: 40px;
+}
+
+html {
+    width: 100vw;
+    height: 100vh;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+}
+
+button {
+    height: 95px;
+    width: 80%;
+    background-color: #1ED760;
+    border-radius: 15px;
+    font-family: Roboto, sans-serif;
+    font-weight: 900;
+    font-size: 48px;
+}
+
+a {
+    font-size: 36px;
+    font-family: Roboto;
+    text-decoration: none;
+    color: black;
+}
+
+a:focus {
+    text-decoration: underline;
+}
+
+button:focus {
+    background-color: blue;
+}

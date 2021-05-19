@@ -1,0 +1,259 @@
+html {
+    width: 100vw;
+    height: 100vh;
+}
+
+body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 15% 85%;
+    grid-template-rows: 90% 10%;
+    flex-direction: row;
+    font-family: Roboto;
+}
+
+aside {
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: 100%
+}
+
+img.whitelogo {
+    width: 150px;
+    height: 56px;
+}
+
+a {
+    color: white;
+    font-family: Roboto;
+    font-size: 36px;
+    font-weight: 900;
+    text-align: center;
+    text-decoration: none;
+}
+
+a:focus {
+    text-decoration: underline;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 20%;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+hr {
+    width: 100%;
+}
+
+.playlists {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 20%;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.playlist {
+    font-weight: 300;
+}
+
+main {
+    background-color: #313030;
+    height: 100%;
+    padding-left: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+h1 {
+    color: white;
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+h2 {
+    color: white;
+    font-size: 48px;
+    font-weight: 700;
+    margin: 0;
+}
+
+button {
+    background-color: #171717;
+    border-radius: 15px;
+    width: 216px;
+    height: 41px;
+    color: white;
+    opacity: 0.8;
+    align-self: flex-end;
+}
+
+.bem {
+    display: flex;
+    height: 50px;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+ul {
+    list-style-type: none;
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin: 0;
+    padding: 0;
+    width: 95%;
+    height: 100%;
+}
+
+article {
+    width: 100%;
+    height: 67px;
+    background-color: #c4c4c4;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+img {
+    height: 90px;
+    width: 90px;
+    padding: 0 1vw;
+}
+
+.playlist-info {
+    height: 180px;
+    width: 120px;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+h3 {
+    padding-right: 10px;
+    color: white;
+}
+
+h4 {
+    justify-self: flex-end;
+    margin: 0;
+    padding: 0;
+    font-weight: 400;
+    color: white;
+}
+
+.playlist-text {
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+footer {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 2;
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.player-buttons {
+    height: 84%;
+    width: 40%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    justify-self: center;
+}
+
+.fas {
+    color: white;
+}
+
+.song-cover {
+    height: 5vh;
+    width: 5vh;
+}
+
+.song-footer {
+    width: 30%;
+    height: 70px;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    align-items: center;
+}
+
+.song-song {
+    margin: 7px;
+    width: 30%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    align-items: center;
+}
+
+.func-buttons {
+    width: 30%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.song-informaton {
+    width: 30%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    flex: 0.3;
+}
+
+.far {
+    color: green;
+}
+
+input {
+    width: 95%;
+    height: 50px;
+    border-radius: 20px;
+    font-size: 36px;
+    color: black;
+}
+
+li {
+    width: 100%;
+    margin: 10px 0;
+}

@@ -1,0 +1,596 @@
+@import 'register.css';
+@import 'login.css';
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+}
+
+html {
+    height: 100vh;
+    width: 100vw;
+}
+
+header {
+    padding: 15px;
+    background-color: black;
+}
+
+a {
+    color: white;
+    font-size: 36px;
+    font-family: Roboto;
+    text-decoration: none;
+}
+
+.Homelink {
+    justify-self: flex-start;
+}
+
+.header-container {
+    padding: 0 150px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.reg {
+    padding: 0 15px;
+}
+
+nav {
+    display: flex;
+    padding: 10px;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.banner {
+    background-image: url("assets/images/wallpaper.jpg");
+    padding: 250px 0;
+    width: 100%;
+    height: 60%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+article {
+    text-align: center;
+}
+
+h1 {
+    font-size: 144px;
+    font-family: Roboto;
+    margin: 0;
+    padding: 0;
+    color: red;
+}
+
+h2 {
+    font-size: 144px;
+    font-family: Roboto;
+    color: darkkhaki;
+    margin: 0;
+    padding: 0;
+}
+
+h3 {
+    font-family: Roboto Regular;
+    font-size: 72px;
+    margin: 0;
+    padding: 0;
+    color: darkmagenta;
+}
+
+footer {
+    height: 100px;
+    background-color: black;
+}
+
+.whilelogo {
+    width: 222px;
+    height: 68px;
+}
+
+.sociallogo {
+    width: 50px;
+    height: 50px;
+}
+
+.aside-whitelogo {
+    width: 150px;
+    height: 56px;
+}
+
+footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+footer p {
+    color: white;
+    font-size: 36px;
+    font-family: Roboto;
+}
+
+.social-logo {
+    background-image: url("assets/images/whitelogo.png");
+    width: 18%;
+    height: 70%;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+a:focus {
+    background-color: red;
+}
+
+.main-player {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 10% 90%;
+    grid-template-rows: 90% 10%;
+    flex-direction: row;
+    font-family: Roboto;
+}
+
+hr {
+    width: 100%;
+}
+
+.player-main {
+    background-color: #313030;
+    height: 100%;
+    padding-left: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.hello-text {
+    color: white;
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+.profile-button {
+    background-color: #171717;
+    border-radius: 15px;
+    width: 216px;
+    height: 41px;
+    color: white;
+    opacity: 0.8;
+    align-self: flex-end;
+    font-size: 18px;
+}
+
+.subheader {
+    display: flex;
+    height: 50px;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main-player {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 15% 85%;
+    grid-template-rows: 90% 10%;
+    flex-direction: row;
+    font-family: Roboto;
+}
+
+#menu {
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: 100%
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 20%;
+    width: 90%;
+}
+
+button:focus {
+    background-color: orange;
+}
+
+.playlists {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 20%;
+    width: 100%;
+}
+
+.playlist {
+    font-weight: 300;
+}
+
+.player-header {
+    color: white;
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+.song-cover {
+    height: 70px;
+    width: 70px;
+}
+
+.footer-player {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 2;
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.song {
+    width: 30%;
+    height: 70px;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    align-items: center;
+}
+
+.func-buttons {
+    width: 30%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    color: white;
+}
+
+.player-buttons {
+    height: 84%;
+    width: 40%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    justify-self: center;
+    color: white;
+}
+
+.far {
+    color: green;
+}
+
+.song-information {
+    width: 30%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    color: white;
+    flex: 0.9;
+}
+
+h4 {
+    margin: 0;
+    padding: 0;
+}
+
+.player-subheader {
+    color: white;
+    font-size: 36px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.hide {
+    display: none;
+}
+
+.profile-article {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.profile-buttons {
+    font-family: 'Roboto';
+    height: 20vw;
+    width: 20vw;
+    font-size: 300%;
+    background-color: #c4c4c4;
+    border-radius: 54px;
+    font-weight: 900;
+    margin: 5px;
+}
+
+.form-legend {
+    font-size: 48px;
+    font-weight: 900;
+    margin: 0 auto;
+    color: white;
+}
+
+.form-input {
+    width: 100%;
+    height: 68px;
+    background-color: #313030;
+    border-radius: 47px;
+    margin: 10px 0;
+    font-size: 36px;
+    border: 1px white solid;
+    color: white;
+    font-weight: 500;
+}
+
+.lyrics-input {
+    width: 100%;
+    height: 150px;
+    background-color: #313030;
+    border-radius: 47px;
+    margin: 10px 0;
+    font-size: 36px;
+    border: 1px white solid;
+    color: white;
+    font-weight: 500;
+}
+
+.cover1 {
+    opacity: 0;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    position: absolute;
+}
+
+.cover {
+    width: 100%;
+    height: 34px;
+    background-color: #1ED760;
+    border-radius: 17px;
+    font-size: 18px;
+    border: 1px white solid;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    margin: 5px 0px;
+}
+
+select {
+    width: 100%;
+    height: 34px;
+    background-color: #1ED760;
+    border-radius: 17px;
+    font-size: 18px;
+    border: 1px white solid;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    margin: 5px 0px;
+}
+
+.form-player {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.form-fieldset {
+    width: 90%;
+    border: 0;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.form-button {
+    width: 100%;
+    height: 111px;
+    font-family: 'Roboto';
+    font-size: 250%;
+    font-weight: 700;
+    background-color: #5B8D4E;
+    color: #000000;
+    border-radius: 35px;
+}
+
+ul {
+    list-style-type: none;
+    display: grid;
+    justify-content: flex-start;
+    align-items: flex-start;
+    grid-template-columns: repeat(auto-fill, 10vh);
+    grid-template-rows: repeat(auto-fill, 1fr);
+    column-gap: 100px;
+    row-gap: 15px;
+    width: 90%;
+}
+
+.playlist-all {
+    background-color: black;
+    width: 146px;
+    height: 217px;
+    border-radius: 29px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+.playlis-cover {
+    height: 90px;
+    width: 90px;
+    padding-bottom: 10px;
+}
+
+.playlist-title {
+    font-size: 36px;
+    color: white;
+}
+
+.playlist-description {
+    font-size: 18px;
+    color: white;
+}
+
+.playlist-playlist-header {
+    color: white;
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+.playlist-playlist-subheader {
+    color: white;
+    font-size: 36px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.playlist-playlist-information {
+    height: 15vh;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.playlist-playlist-cover {
+    height: 15vh;
+    width: 15vh;
+}
+
+.playlist-playlist {
+    margin: 15px 0;
+    width: 100%;
+    display: flex;
+    height: 15vh;
+    flex-direction: row;
+    align-items: space-between;
+}
+
+.search {
+    width: 95%;
+    height: 50px;
+    border-radius: 20px;
+    font-size: 36px;
+    color: black;
+}
+
+.genres {
+    list-style-type: none;
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin: 0;
+    padding: 0;
+    width: 95%;
+    height: 100%;
+}
+
+.genre {
+    background-color: #FF007A;
+    text-align: center;
+    width: 100%;
+    height: 49px;
+    margin: 10px 0px;
+    border-radius: 58px;
+    font-family: 'Roboto';
+    font-weight: 900;
+    font-size: 48px;
+}
+
+.songs-list {
+    list-style-type: none;
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin: 0;
+    padding: 0;
+    width: 95%;
+    height: 100%;
+}
+
+.song-all {
+    width: 100%;
+    height: 100px;
+    background-color: #c4c4c4;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.song-song-cover {
+    height: 90px;
+    width: 90px;
+    padding: 0 1vw;
+}
+
+li {
+    width: 100%;
+    height: 100px;
+}
+
+.song-section {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.song-song-information {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+dialog {
+    height: 70%;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+}

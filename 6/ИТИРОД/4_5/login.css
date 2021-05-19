@@ -1,0 +1,82 @@
+.blacklogo {
+    width: 197px;
+    height: 69px;
+}
+
+form {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+fieldset {
+    border: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+legend {
+    font-family: Roboto, sans-serif;
+    font-size: 48px;
+    font-weight: 900;
+    margin: 0 auto;
+}
+
+input {
+    width: 80%;
+    height: 54px;
+    font-size: 48px;
+    border-radius: 15px;
+    margin: 10px 0;
+}
+
+html {
+    width: 100vw;
+    height: 100vh;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    font-family: Roboto;
+}
+
+button {
+    height: 95px;
+    width: 80%;
+    border-radius: 15px;
+    font-family: Roboto, sans-serif;
+    font-weight: 900;
+    font-size: 48px;
+    margin: 15px 0;
+}
+
+a {
+    font-size: 36px;
+    font-family: Roboto;
+}
+
+b {
+    font-family: Roboto;
+    font-size: 36px;
+}
+
+.registerButton {
+    background-color: white;
+    border: 2px solid black;
+}
+
+.log {
+    background-color: #1ED760;
+}
+
+input:focus {
+    border-radius: 50px;
+}
+
+button:focus {
+    background-color: orange;
+}
